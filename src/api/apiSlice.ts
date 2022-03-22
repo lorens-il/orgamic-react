@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { IDataSlide } from '../../interfaces/interfaces';
+import { IDataSlide } from '../interfaces/interfaces';
 
 
 export const apiSlice = createApi({

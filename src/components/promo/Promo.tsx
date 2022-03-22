@@ -1,6 +1,6 @@
 import { FC, useMemo } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { useGetSlidesQuery } from "../api/apiSlice";
+import { useGetSlidesQuery } from "../../api/apiSlice";
 
 import 'swiper/scss';
 import 'swiper/scss/navigation';
