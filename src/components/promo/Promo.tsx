@@ -5,9 +5,11 @@ import { useGetSlidesQuery } from "../api/apiSlice";
 import 'swiper/scss';
 import 'swiper/scss/navigation';
 import "./promo.sass";
+import "../../styles/link.sass"
 
 import { Navigation } from "swiper";
 import { IDataSlide } from "../../interfaces/interfaces";
+import Spinner from "../spinner/Spinner";
 
 
 
@@ -19,17 +21,23 @@ const Promo: FC = () => {
         isError,
     } = useGetSlidesQuery();
 
-    const createdSlide = (dataSlides: IDataSlide[]) => {
+    const creatingSlide = (dataSlides: IDataSlide[]) => {
         return dataSlides.map(({id, url, alt}) => {
             return (
                 <SwiperSlide key={id}>
                         <img src={url} alt={alt} />
+                        <a className="link_big" href="/">
+                            <div className="">
+                                shop now
+                            </div>
+                        </a>
                 </SwiperSlide>
             )
         })
     }
+    
+    const slides = useMemo(() => creatingSlide(dataSlides), [dataSlides]);
 
-    const slides = useMemo(() => createdSlide(dataSlides), [dataSlides]);
     return (
         <div className="promo">
                 <Swiper
@@ -37,6 +45,7 @@ const Promo: FC = () => {
                     modules={[Navigation]}
                     slidesPerView={1}
                 >
+                    {isLoading ? <Spinner/> : isError ? <h5 className="text-center mt-5">Ошибка загрузки</h5> : null}
                     {slides}
                 </Swiper>      
         </div>
