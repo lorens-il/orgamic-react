@@ -1,9 +1,16 @@
-import {FC} from "react";
+import {FC, useState} from "react";
 import "./header.sass";
 import logo from "./icons/logo.png";
 import cart from "./icons/cart.svg";
 
 const Header: FC = () => {
+
+    const [toggle, setToggle] = useState(false);
+
+    const openMenu = () => {
+        setToggle(toggle => !toggle);
+    }
+
     return (
         <header className="header">
             <div className="container">
@@ -52,10 +59,11 @@ const Header: FC = () => {
                 </div>
                 </div> 
                 <div className="header__line"></div>
-                <div className="header__humburger">
+                <div className="header__humburger" onClick={openMenu}>
                     <div className="header__humburger-line"></div>
                 </div>
-                <div className="header__menu">
+                <div className={`header__menu ${toggle ? "header__menu_active" : ''}`}>
+                    <div className="header__cross" onClick={openMenu}>&#10006;</div>
                     <div className="container">
                         <div className="header__wrapper-navs">
                             <a className="header__link-logo" href="/">
