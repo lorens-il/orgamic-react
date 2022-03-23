@@ -8,7 +8,7 @@ import App from './components/app/App';
 
 
 import './styles/index.sass';
-
+import './styles/media.sass';
 
 ReactDOM.render(
   <Provider store={store}>

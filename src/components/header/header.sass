@@ -5,12 +5,8 @@
         display: flex
         justify-content: space-between
         align-items: center
+        flex-wrap: wrap
         padding: 15px 0 16px
-    &__addresses
-        display: flex
-        justify-content: space-between
-        align-items: center
-        flex-wrap: wrap 
     &__wrapper
         &-social
             display: flex
@@ -23,7 +19,8 @@
             display: flex
             font-size: 13px
             font-weight: 500
-            width: calc(366px / 1170px * 100%)
+            min-width: 366px
+            flex-wrap: wrap
         &-social-icons
             margin-right: 20px
         &-icon
@@ -33,6 +30,8 @@
             display: flex
             justify-content: space-between
             align-items: center 
+    &__address
+        display: flex
     &__info
         margin: 0 18px 0 9px
     &__social-icon:hover

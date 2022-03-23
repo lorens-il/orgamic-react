@@ -9,18 +9,22 @@ const Header: FC = () => {
             <div className="container">
                 <div className="header__contacts">
                         <div className="header__wrapper-address">
-                            <div className="header__wrapper-icon">
-                                <svg className="header__icon" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fillRule="evenodd" clipRule="evenodd" d="M0 6.65425C0 2.97431 3.07511 0 6.79473 0C10.5249 0 13.6 2.97431 13.6 6.65425C13.6 8.50857 12.9256 10.2301 11.8156 11.6893C10.5911 13.2988 9.08177 14.7012 7.38281 15.8019C6.99401 16.0563 6.64313 16.0755 6.21633 15.8019C4.5078 14.7012 2.99847 13.2988 1.7844 11.6893C0.673585 10.2301 0 8.50857 0 6.65425ZM4.55539 6.86145C4.55539 8.09417 5.56136 9.06377 6.79473 9.06377C8.02897 9.06377 9.04465 8.09417 9.04465 6.86145C9.04465 5.63825 8.02897 4.62147 6.79473 4.62147C5.56136 4.62147 4.55539 5.63825 4.55539 6.86145Z" fill="#76A713"/>
-                                </svg>
+                            <div className="header__address">
+                                <div className="header__wrapper-icon">
+                                    <svg className="header__icon" width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fillRule="evenodd" clipRule="evenodd" d="M0 6.65425C0 2.97431 3.07511 0 6.79473 0C10.5249 0 13.6 2.97431 13.6 6.65425C13.6 8.50857 12.9256 10.2301 11.8156 11.6893C10.5911 13.2988 9.08177 14.7012 7.38281 15.8019C6.99401 16.0563 6.64313 16.0755 6.21633 15.8019C4.5078 14.7012 2.99847 13.2988 1.7844 11.6893C0.673585 10.2301 0 8.50857 0 6.65425ZM4.55539 6.86145C4.55539 8.09417 5.56136 9.06377 6.79473 9.06377C8.02897 9.06377 9.04465 8.09417 9.04465 6.86145C9.04465 5.63825 8.02897 4.62147 6.79473 4.62147C5.56136 4.62147 4.55539 5.63825 4.55539 6.86145Z" fill="#76A713"/>
+                                    </svg>
+                                </div>
+                                <div className="header__info">15/A, Nest Tower, NYC</div>
                             </div>
-                            <div className="header__info">15/A, Nest Tower, NYC</div>
-                            <div className="header__wrapper-icon">
-                                <svg className="header__icon" width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fillRule="evenodd" clipRule="evenodd" d="M14.939 0C16.28 0 17.57 0.471111 18.519 1.31644C19.469 2.16 20 3.29778 20 4.48889V11.5111C20 13.9911 17.73 16 14.939 16H5.06C2.269 16 0 13.9911 0 11.5111V4.48889C0 2.00889 2.259 0 5.06 0H14.939ZM16.53 5.81333L16.61 5.74222C16.849 5.48444 16.849 5.11111 16.599 4.85333C16.46 4.72089 16.269 4.64 16.07 4.62222C15.86 4.61244 15.66 4.67556 15.509 4.8L11 8C10.42 8.42756 9.589 8.42756 9 8L4.5 4.8C4.189 4.59556 3.759 4.62222 3.5 4.86222C3.23 5.10222 3.2 5.48444 3.429 5.75111L3.56 5.86667L8.11001 9.02222C8.67001 9.41333 9.34901 9.62667 10.06 9.62667C10.769 9.62667 11.46 9.41333 12.019 9.02222L16.53 5.81333Z" fill="#76A713"/>
-                                </svg>
+                            <div className="header__address">
+                                <div className="header__wrapper-icon">
+                                    <svg className="header__icon" width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fillRule="evenodd" clipRule="evenodd" d="M14.939 0C16.28 0 17.57 0.471111 18.519 1.31644C19.469 2.16 20 3.29778 20 4.48889V11.5111C20 13.9911 17.73 16 14.939 16H5.06C2.269 16 0 13.9911 0 11.5111V4.48889C0 2.00889 2.259 0 5.06 0H14.939ZM16.53 5.81333L16.61 5.74222C16.849 5.48444 16.849 5.11111 16.599 4.85333C16.46 4.72089 16.269 4.64 16.07 4.62222C15.86 4.61244 15.66 4.67556 15.509 4.8L11 8C10.42 8.42756 9.589 8.42756 9 8L4.5 4.8C4.189 4.59556 3.759 4.62222 3.5 4.86222C3.23 5.10222 3.2 5.48444 3.429 5.75111L3.56 5.86667L8.11001 9.02222C8.67001 9.41333 9.34901 9.62667 10.06 9.62667C10.769 9.62667 11.46 9.41333 12.019 9.02222L16.53 5.81333Z" fill="#76A713"/>
+                                    </svg>
+                                </div>
+                                <a className="header__info" href="mailto:info@webmail.com">info@webmail.com</a>
                             </div>
-                            <a className="header__info" href="mailto:info@webmail.com">info@webmail.com</a>   
                         </div>   
 
                         <div className="header__wrapper-social">
