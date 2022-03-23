@@ -52,23 +52,22 @@ const Header: FC = () => {
                 </div>
                 </div> 
                 <div className="header__line"></div>
-                <div className="header__main">
+                <div className="header__humburger">
+                    <div className="header__humburger-line"></div>
+                </div>
+                <div className="header__menu">
                     <div className="container">
                         <div className="header__wrapper-navs">
                             <a className="header__link-logo" href="/">
                                 <img src={logo} alt="logo" className="header__logo" />
                             </a>
                             <nav className="header__nav">
-                                <ul>
-                                    <li><a href="/">Home</a></li>
-                                    <li><a href="/">About</a></li>  
-                                    <li className="header__cart">
-                                        <a href="/">
-                                            <img src={cart} alt="cart" />
-                                            <div className="header__cart-counter">0</div>
-                                        </a>
-                                    </li>     
-                                </ul> 
+                                <a href="/">Home</a> 
+                                <a href="/">About</a> 
+                                <a className="header__cart" href="/">
+                                    <img src={cart} alt="cart" />
+                                    <div className="header__cart-counter">0</div>
+                                </a>
                             </nav> 
                         </div>   
                     </div>    
