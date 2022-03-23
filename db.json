@@ -15,5 +15,14 @@
             "url": "https://i.ibb.co/WFgSrVr/background1.jpg",
             "alt": "organic"
         }
+    ],
+    "discounts": [
+        {
+            "id": 1,
+            "url":"https://i.ibb.co/WFgSrVr/background1.jpg",
+            "discountStyles":   {
+                "background": "#FF66001A"
+            }
+        }
     ]
 }
