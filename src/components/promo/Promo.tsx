@@ -7,7 +7,7 @@ import 'swiper/scss/navigation';
 import "./promo.sass";
 import "../../styles/link.sass"
 
-import { Navigation } from "swiper";
+import { Autoplay, Navigation } from "swiper";
 import { IDataSlide } from "../../interfaces/interfaces";
 import Spinner from "../spinner/Spinner";
 
@@ -42,8 +42,15 @@ const Promo: FC = () => {
         <div className="promo">
                 <Swiper
                     navigation={true}
-                    modules={[Navigation]}
+                    modules={[Navigation, Autoplay]}
                     slidesPerView={1}
+                    autoplay={
+                        {
+                            delay: 3000, 
+                            pauseOnMouseEnter: true, 
+                            disableOnInteraction: false
+                        }
+                    }
                 >
                     {isLoading ? <Spinner/> : isError ? <h5 className="text-center mt-5">Ошибка загрузки</h5> : null}
                     {slides}
