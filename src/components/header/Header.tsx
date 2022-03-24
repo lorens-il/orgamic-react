@@ -8,6 +8,7 @@ const Header: FC = () => {
     const [toggle, setToggle] = useState(false);
 
     const openMenu = () => {
+        document.documentElement.style.overflow = toggle ? "auto" : "hidden";
         setToggle(toggle => !toggle);
     }
 
