@@ -1,16 +1,22 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { IDataSlide } from '../interfaces/interfaces';
+import { IDataSlide, IDataDiscount } from '../interfaces/interfaces';
 
 
 export const apiSlice = createApi({
-    reducerPath: 'slideApi',
+    reducerPath: 'api',
     baseQuery: fetchBaseQuery({baseUrl: "http://localhost:3001"}),
     endpoints: builder => ({
         getSlides: builder.query<IDataSlide[], void>({
             query: () => "/slides",
         }),
+        getDiscounts: builder.query<IDataDiscount[], void>({
+            query: () => "/discounts",
+        })
     }),
 
 });
 
-export const {useGetSlidesQuery} = apiSlice;
+export const {
+                useGetSlidesQuery,
+                useGetDiscountsQuery  
+            } = apiSlice;

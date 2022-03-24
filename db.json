@@ -19,10 +19,25 @@
     "discounts": [
         {
             "id": 1,
-            "url":"https://i.ibb.co/WFgSrVr/background1.jpg",
+            "title": "Get 10% off on Vegetables",
+            "desc": "Shop our selection of organic fresh vegetables in a discounted price. 10% off on all vegetables.",
+            "url":"https://i.ibb.co/SyQPJSB/broccoli.png",
+            "alt": "vegetables",
             "discountStyles":   {
                 "background": "#FF66001A"
-            }
+            },
+            "pictureVariant": "discounts__picture_1"
+        },
+        {
+            "id": 2,
+            "title": "Get 10% off on Vegetables",
+            "desc": "Shop our selection of organic fresh vegetables in a discounted price. 10% off on all vegetables.",
+            "url":"https://i.ibb.co/vhr2cDL/vegetables.png",
+            "alt": "vegetables",
+            "discountStyles":   {
+                "background": "#3498DB1A"
+            },
+            "pictureVariant": "discounts__picture_2"
         }
     ]
 }

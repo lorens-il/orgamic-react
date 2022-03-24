@@ -1,4 +1,5 @@
 import {FC} from "react";
+import Discounts from "../../discounts/Discounts";
 import Header from "../../header/Header";
 import Promo from "../../promo/Promo";
 
@@ -7,6 +8,7 @@ const ProductPage: FC = () => {
         <>
             <Header/>
             <Promo/>
+            <Discounts/>
         </>
     )
 }
