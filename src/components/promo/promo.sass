@@ -46,36 +46,16 @@
         z-index: 1
     &__next, &__prev
         position: relative
+        display: flex
+        align-items: center
+        justify-content: center
         width: 50px 
         height: 50px 
         background: $main-color
-        &::before, &::after
-            content: ""
-            position: relative
-            display: block
-            width: 15px
-            height: 2px
-            background: #ffffff 
-    &__prev::after
-        top: 55%
-        left: 30%
-        transform: rotate(45deg)
-    &__prev::before
-        top: 35%
-        left: 30%
-        transform: rotate(-45deg)
-    &__next::after
-        top: 55%
-        left: 30%
-        transform: rotate(-45deg)
-    &__next::before
-        top: 35%
-        left: 30%
-        transform: rotate(45deg)
+        svg
+            width: 12px
+            height: 18px
     &-button-disabled
-        opacity: 1 !important
         background: rgba($main-color, 0.3)
-        &::after
-            background: $main-color
-        &::before
-            background: $main-color
+        path
+            stroke: $main-color 
