@@ -22,15 +22,23 @@ const Promo: FC = () => {
     } = useGetSlidesQuery();
 
     const creatingSlide = (dataSlides: IDataSlide[]) => {
-        return dataSlides.map(({id, url, alt}) => {
+        return dataSlides.map(({id, url, alt, fruitUrl, fruitAlt}) => {
             return (
                 <SwiperSlide key={id}>
                         <img src={url} alt={alt} />
-                        <a className="link_big" href="/">
-                            <div className="">
-                                shop now
+                        <div className="promo__text">
+                            <h1 className="promo__title">
+                                tasty &<br />healthy <span>organic</span><br />food everyday    
+                            </h1>
+                            <div className="promo__wrapper-img">
+                                <img src={fruitUrl} alt={fruitAlt} />    
                             </div>
-                        </a>
+                            <a className="link_big" href="/">
+                                <div className="">
+                                    shop now
+                                </div>
+                            </a>
+                        </div>
                 </SwiperSlide>
             )
         })
@@ -41,7 +49,12 @@ const Promo: FC = () => {
     return (
         <div className="promo">
                 <Swiper
-                    navigation={true}
+                    navigation={
+                        {
+                            nextEl: ".swiper__next",
+                            prevEl: ".swiper__prev"
+                        }
+                    }
                     modules={[Navigation, Autoplay]}
                     slidesPerView={1}
                     autoplay={
@@ -54,6 +67,10 @@ const Promo: FC = () => {
                 >
                     {isLoading ? <Spinner/> : isError ? <h5 className="text-center mt-5">Ошибка загрузки</h5> : null}
                     {slides}
+                    <div className="swiper__btns">
+                        <div className="swiper__prev"></div>
+                        <div className="swiper__next"></div>    
+                    </div>
                 </Swiper>      
         </div>
     )

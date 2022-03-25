@@ -2,18 +2,24 @@
     "slides": [
         {
             "id": "916f74f5-8ebc-4b31-b4a6-7488d859b8d3",
-            "url": "https://i.ibb.co/WFgSrVr/background1.jpg",
-            "alt": "organic"
+            "url": "https://i.ibb.co/jrxFnB3/background1.jpg",
+            "alt": "organic",
+            "fruitUrl": "https://i.ibb.co/f9JSgCB/fruit.png",
+            "fruitAlt": "lime"
         },
         {
             "id": "e849a062-f782-4ff7-ad64-307d14131736",
-            "url": "https://i.ibb.co/WFgSrVr/background1.jpg",
-            "alt": "organic"
+            "url": "https://i.ibb.co/jrxFnB3/background1.jpg",
+            "alt": "organic",
+            "fruitUrl": "https://i.ibb.co/f9JSgCB/fruit.png",
+            "fruitAlt": "lime"
         },
         {
             "id": "16be3839-cf41-46dc-84bf-63369d3bdf6a",
-            "url": "https://i.ibb.co/WFgSrVr/background1.jpg",
-            "alt": "organic"
+            "url": "https://i.ibb.co/jrxFnB3/background1.jpg",
+            "alt": "organic",
+            "fruitUrl": "https://i.ibb.co/f9JSgCB/fruit.png",
+            "fruitAlt": "lime"
         }
     ],
     "discounts": [

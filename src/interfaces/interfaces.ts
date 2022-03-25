@@ -1,7 +1,9 @@
 export interface IDataSlide {
     id: string | number,
     url: string,
-    alt: string
+    alt: string,
+    fruitUrl : string,
+    fruitAlt: string,
 }
 
 export interface IDataDiscount {
