@@ -1,6 +1,7 @@
 import {FC} from "react";
 import Discounts from "../../discounts/Discounts";
 import Header from "../../header/Header";
+import Healthy from "../../healthy/Healthy";
 import Promo from "../../promo/Promo";
 
 const ProductPage: FC = () => {
@@ -9,6 +10,7 @@ const ProductPage: FC = () => {
             <Header/>
             <Promo/>
             <Discounts/>
+            <Healthy/>
         </>
     )
 }
