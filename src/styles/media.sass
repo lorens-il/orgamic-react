@@ -6,8 +6,22 @@
     .header
         &__wrapper-address
             width: 77%
-    .swiper-button-next
-        left: 15%
+    .promo
+        &__title
+            font-size: 48px
+            line-height: 62px
+            margin-bottom: 30px
+        &__wrapper-img
+            width: 350px
+            height: 350px
+            left: 60%
+        .swiper
+            &__btns
+                width: 100px
+                height: 40px
+            &__next, &__prev
+                width: 40px 
+                height: 40px 
 
 @media (max-width: 992px)
     .container
@@ -15,6 +29,16 @@
     .link_big
         width: 120px
         height: 40px
+    .promo
+        &__title
+            font-size: 36px
+            line-height: 48px
+            margin-bottom: 0
+        &__wrapper-img
+            width: 350px
+            height: 350px
+            top: -30%
+            left: 45%
 
 @media (max-width: 768px)
     .container
@@ -22,11 +46,20 @@
     .header
         &__wrapper-address
             width: 70%
-    .swiper-button
-        &-next, &-prev
-            width: 35px
-            height: 35px
-            top: 96%
+    .promo
+        &__text
+            width: 100% 
+        &__title
+            font-size: 36px
+            line-height: 52px
+            margin-bottom: 25px
+        &__wrapper-img
+            width: 200px
+            height: 200px
+            top: -10%
+            left: 58%
+    .swiper__btns
+        display: none
 
 @media (max-width: 576px)
     .container
@@ -105,6 +138,13 @@
             a 
                 font-size: 24px
                 margin: 0 0 18px 0
+    .promo
+        &__title
+            font-size: 24px
+            line-height: 38px
+            margin-bottom: 0px
+        &__wrapper-img
+            display: none
     .discounts
         &__wrapper
             margin: 0 auto
@@ -133,6 +173,13 @@
             font-size: 14px
 
 @media (max-width: 376px)
+    .promo
+        &__title
+            font-size: 22px
+            line-height: 32px
+            span
+                text-shadow: none
+                color: #000
     .header
         &__address
             margin: 0 0 10px 0

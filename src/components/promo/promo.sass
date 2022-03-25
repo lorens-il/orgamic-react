@@ -5,7 +5,6 @@
     &__text
         position: absolute
         top: 8%
-        left: 15%
         width: 740px
     &__title
         font-weight: 500
@@ -19,7 +18,7 @@
     &__wrapper-img
         position: absolute
         top: -10%
-        left: 95%
+        left: 94%
         width: 459px
         height: 459px
         &::after
@@ -33,24 +32,22 @@
             height: 100%
             object-fit: cover
 
-.swiper-slide img
-    width: 100%
-    height: 100%
-
 .swiper
+    &-slide img
+        width: 100%
+        height: 100%
     &__btns
-        position: absolute
+        position: relative
         display: flex
         justify-content: space-between
-        width: 90px
-        height: 40px
-        bottom: 0%
-        left: 15%
+        width: 110px
+        height: 50px
+        margin-top: -100px
         z-index: 1
     &__next, &__prev
         position: relative
-        width: 40px 
-        height: 40px 
+        width: 50px 
+        height: 50px 
         background: $main-color
         &::before, &::after
             content: ""

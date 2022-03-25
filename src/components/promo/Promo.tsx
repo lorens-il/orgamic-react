@@ -26,18 +26,20 @@ const Promo: FC = () => {
             return (
                 <SwiperSlide key={id}>
                         <img src={url} alt={alt} />
-                        <div className="promo__text">
-                            <h1 className="promo__title">
-                                tasty &<br />healthy <span>organic</span><br />food everyday    
-                            </h1>
-                            <div className="promo__wrapper-img">
-                                <img src={fruitUrl} alt={fruitAlt} />    
-                            </div>
-                            <a className="link_big" href="/">
-                                <div className="">
-                                    shop now
+                        <div className="container">
+                            <div className="promo__text">
+                                <h1 className="promo__title">
+                                    tasty &<br />healthy <span>organic</span><br />food everyday    
+                                </h1>
+                                <div className="promo__wrapper-img">
+                                    <img src={fruitUrl} alt={fruitAlt} />    
                                 </div>
-                            </a>
+                                <a className="link_big" href="/">
+                                    <div className="">
+                                        shop now
+                                    </div>
+                                </a>
+                            </div>    
                         </div>
                 </SwiperSlide>
             )
@@ -67,10 +69,12 @@ const Promo: FC = () => {
                 >
                     {isLoading ? <Spinner/> : isError ? <h5 className="text-center mt-5">Ошибка загрузки</h5> : null}
                     {slides}
-                    <div className="swiper__btns">
-                        <div className="swiper__prev"></div>
-                        <div className="swiper__next"></div>    
-                    </div>
+                        <div className="container">
+                            <div className="swiper__btns">
+                                <div className="swiper__prev"></div>
+                                <div className="swiper__next"></div>    
+                            </div>      
+                        </div>      
                 </Swiper>      
         </div>
     )
