@@ -73,12 +73,12 @@ const Promo: FC = () => {
                             <div className="swiper__btns">
                                 <div className="swiper__prev">
                                     <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M7.5 14L1 7.5L7.5 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M7.5 14L1 7.5L7.5 1" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                                     </svg>    
                                 </div>
                                 <div className="swiper__next">
                                     <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M1.5 1L8 7.5L1.5 14" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M1.5 1L8 7.5L1.5 14" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                                     </svg>
                                 </div>    
                             </div>      
