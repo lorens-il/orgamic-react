@@ -1,22 +1,24 @@
 @import "../styles/variables"
 
 .link
+    display: flex
+    align-items: center
+    justify-content: center
+    background: $main-color
+    text-decoration: none
+    cursor: pointer
+    transition-duration: 0.3s
+    div
+        color: rgb(255, 255, 255)
+        font-weight: 700
+        font-size: 16px
+        line-height: 20px
+        text-transform: uppercase
     &_big
-        display: flex
-        align-items: center
-        justify-content: center
         width: 160px
         height: 50px
-        background: $main-color
-        text-decoration: none
-        cursor: pointer
-        transition-duration: 0.3s
         &:hover
             transform: scale(1.12)
-        div
-            color: rgb(255, 255, 255)
-            font-weight: 700
-            font-size: 16px
-            line-height: 20px
-            text-transform: uppercase
-        
+    &_small
+        width: 120px
+        height: 40px

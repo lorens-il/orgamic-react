@@ -45,5 +45,44 @@
             },
             "pictureVariant": "discounts__picture_2"
         }
+    ],
+    "products": [
+        {
+            "id":"14be3847-cf11-46dc-84bf-63369d3bdf6a",
+            "url": "https://i.ibb.co/Rczfkbz/Watermelon.png",
+            "name": "Watermelon",
+            "desc": "Purchasing from select family farmers who farm onganically.",
+            "cost": 11,
+            "stars": 5,
+            "categories": true
+        },
+        {
+            "id":"14be3847-cf11-46dc-84bf-63369d3bdf6a",
+            "url": "https://i.ibb.co/dKq3Sfy/Fresh-Fruits.png",
+            "name": "Strawberry",
+            "desc": "Purchasing from select family farmers who farm onganically.",
+            "cost": 12,
+            "stars": 5,
+            "categories": true
+        },
+        {
+            "id":"14be3839-cf41-46dc-84bf-63369d3bdf6a",
+            "url": "https://i.ibb.co/JqjNGLP/Eggpent.png",
+            "name": "Eggpen",
+            "desc": "Purchasing from select family farmers who farm onganically.",
+            "cost": 10,
+            "stars": 4,
+            "categories": true
+        },
+        {
+            "id":"14be3839-cf41-46dc-84bf-62169d3bdf6a",
+            "url": "https://i.ibb.co/vHhKCzF/Tomato.png",
+            "name": "Tomato",
+            "desc": "Purchasing from select family farmers who farm onganically.",
+            "cost": 11,
+            "stars": 4,
+            "categories": true
+        }
+        
     ]
 }

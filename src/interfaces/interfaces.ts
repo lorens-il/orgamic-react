@@ -17,3 +17,13 @@ export interface IDataDiscount {
     },
     pictureVariant: string
 }
+
+export interface IDataProduct {
+    id: string | number,
+    url: string,
+    name: string,
+    desc: string
+    cost: string,
+    stars: number,
+    categories: boolean
+}

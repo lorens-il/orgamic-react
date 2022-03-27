@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { IDataSlide, IDataDiscount } from '../interfaces/interfaces';
+import { IDataSlide, IDataDiscount, IDataProduct } from '../interfaces/interfaces';
 
 
 export const apiSlice = createApi({
@@ -11,12 +11,16 @@ export const apiSlice = createApi({
         }),
         getDiscounts: builder.query<IDataDiscount[], void>({
             query: () => "/discounts",
-        })
+        }),
+        getProducts: builder.query<IDataProduct[], void>({
+            query: () => "/products",
+        }),
     }),
 
 });
 
 export const {
                 useGetSlidesQuery,
-                useGetDiscountsQuery  
+                useGetDiscountsQuery,
+                useGetProductsQuery  
             } = apiSlice;

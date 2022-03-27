@@ -1,0 +1,59 @@
+@import "../../styles/variables.sass"
+    
+.priority-products
+    padding: 100px 0 200px
+    background: #F8F8F8
+    &__content
+        display: grid
+        grid-template: repeat(1, minmax(354px, auto)) / repeat(auto-fill, minmax(270px, auto))
+        grid-auto-rows: minmax(354px, auto)
+        gap: 30px
+    &__title
+        font-weight: 500
+        font-size: 30px
+        line-height: 44px
+    &__text
+        text-align: center
+        font-weight: 500
+        font-size: 16px
+        line-height: 22px
+        color: #888888
+        margin-bottom: 27px
+    &__item
+        padding: 20px 10px 30px
+        position: relative
+        display: flex
+        flex-direction: column
+        align-items: center
+        width: $size-priority-products
+        min-height: 354px
+        border: 1px solid $main-color
+        overflow: hidden
+    &__wrapper
+        position: relative
+        left: -25%
+        display: flex
+        justify-content: center
+    &__wrapper-img
+        width: 200px
+        height: 145px
+        img
+            width: 100%
+            height: 100%
+            object-fit: contain
+    &__btns
+        display: flex
+        width: 540px
+    &__wrapper
+        width: $size-priority-products
+    &__arrow
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 40px
+        height: 40px
+        border: 1px solid $main-color
+        img
+            width: 15px
+            height: 10px
+

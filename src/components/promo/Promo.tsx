@@ -34,7 +34,7 @@ const Promo: FC = () => {
                                 <div className="promo__wrapper-img">
                                     <img src={fruitUrl} alt={fruitAlt} />    
                                 </div>
-                                <a className="link_big" href="/">
+                                <a className="link link_big" href="/">
                                     <div className="">
                                         shop now
                                     </div>
