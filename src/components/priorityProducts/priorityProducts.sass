@@ -12,6 +12,8 @@
         font-weight: 500
         font-size: 30px
         line-height: 44px
+        color: #000
+        transition-duration: 0.5s
     &__text
         text-align: center
         font-weight: 500
@@ -29,9 +31,11 @@
         min-height: 354px
         border: 1px solid $main-color
         overflow: hidden
+        transition-duration: 0.5s
+        &_active
+            border: 1px solid #DDDDDD
     &__wrapper
         position: relative
-        left: -25%
         display: flex
         justify-content: center
     &__wrapper-img
@@ -42,8 +46,11 @@
             height: 100%
             object-fit: contain
     &__btns
+        position: relative
         display: flex
         width: 540px
+        left: -54.4%
+        transition-duration: 0.6s
     &__wrapper
         width: $size-priority-products
     &__arrow
@@ -53,6 +60,7 @@
         width: 40px
         height: 40px
         border: 1px solid $main-color
+        cursor: pointer
         img
             width: 15px
             height: 10px
