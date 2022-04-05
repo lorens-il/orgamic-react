@@ -9,6 +9,7 @@ import "../../styles/link.sass"
 
 import { Autoplay, Navigation } from "swiper";
 import { IDataSlide } from "../../interfaces/interfaces";
+import ErrorMessage from "../errorMessage/ErrorMessage";
 import Spinner from "../spinner/Spinner";
 
 
@@ -67,7 +68,7 @@ const Promo: FC = () => {
                         }
                     }
                 >
-                    {isLoading ? <Spinner/> : isError ? <h5 className="text-center mt-5">Ошибка загрузки</h5> : null}
+                    {isLoading && !isError ? <Spinner/> : isError ? <ErrorMessage/> : null}
                     {slides}
                         <div className="container">
                             <div className="swiper__btns">

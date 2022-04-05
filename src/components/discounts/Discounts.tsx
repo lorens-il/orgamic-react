@@ -1,4 +1,5 @@
 import { FC } from "react";
+import ErrorMessage from "../errorMessage/ErrorMessage";
 import Spinner from "../spinner/Spinner";
 import { useGetDiscountsQuery } from "../../api/apiSlice";
 import { IDataDiscount } from "../../interfaces/interfaces";
@@ -17,7 +18,6 @@ const Discounts: FC = () => {
         return discounts.map(({id, title, desc, url, alt, discountStyles, pictureVariant}) => {
             return (
                 <div key={id} className="discounts__item" style={discountStyles}>
-                    {isLoading ? <Spinner/> : isError ? <h5 className="text-center mt-5">Ошибка загрузки</h5> : null}
                     <div className="discounts__wrapper">
                         <h2 className="discounts__title">
                             {title}
@@ -39,6 +39,7 @@ const Discounts: FC = () => {
     return (
         <div className="discounts">
             <div className="container">
+                {isLoading && !isError ? <Spinner/> : isError ? <ErrorMessage/> : null}
                 <div className="discounts__items">
                     {discountsList}
                 </div>  

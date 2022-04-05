@@ -1,5 +1,7 @@
 import { FC, useRef } from "react"; 
 import { useGetProductsQuery } from "../../api/apiSlice";
+import ErrorMessage from "../errorMessage/ErrorMessage";
+import Spinner from "../spinner/Spinner";
 import arrow from "./arrow.svg"
 
 import "./priorityProducts.sass";
@@ -71,6 +73,7 @@ const PriorityProducts: FC = () => {
     return (
         <div className="priority-products">
             <div className="container">
+                {isLoading && !isError ? <Spinner/> : isError ? <ErrorMessage/> : null}
                 <div className="priority-products__content">
                     {list} 
                 </div>    
