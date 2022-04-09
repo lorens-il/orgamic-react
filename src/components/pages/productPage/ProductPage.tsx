@@ -4,6 +4,7 @@ import Header from "../../header/Header";
 import Healthy from "../../healthy/Healthy";
 import Promo from "../../promo/Promo";
 import PriorityProducts from "../../priorityProducts/PriorityProducts";
+import Facts from "../../facts/Facts";
 
 const ProductPage: FC = () => {
     return (
@@ -13,6 +14,7 @@ const ProductPage: FC = () => {
             <Discounts/>
             <Healthy/>
             <PriorityProducts/>
+            <Facts/>
         </>
     )
 }
