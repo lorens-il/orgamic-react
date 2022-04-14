@@ -18,13 +18,12 @@ const PriorityProducts: FC = () => {
               greenBorder = "1px solid rgb(118, 167, 19)";
         
         refBorder.current.forEach((item, i) => {
-            console.log(e.currentTarget.dataset.index, i, item.style.border);
-            if (+e.currentTarget.dataset.index === i && item.style.border !== grayBorder) {
+            if (+e.currentTarget.dataset.index ===  +item.dataset.index  && item.style.border !== grayBorder) {
                 item.style.border = grayBorder; 
                 item.style.background = "rgb(255, 255, 255)";
                 refTitle.current[i].style.color = "rgb(118, 167, 19)";
                 refBtns.current[i].style.left = "54.4%"
-            } else if (+e.currentTarget.dataset.index === i && item.style.border !== greenBorder) {
+            } else if (+e.currentTarget.dataset.index === +item.dataset.index && item.style.border !== greenBorder) {
                 item.style.cssText = ''
                 refTitle.current[i].style.cssText = ''
                 refBtns.current[i].style.cssText = ''
@@ -43,7 +42,7 @@ const PriorityProducts: FC = () => {
         return data.map(({id, url, name, desc, categories}, i) => {
             if (categories === false) return null;
             return (
-                <div key={id} ref={item => refBorder.current.push(item)} className="priority-products__item">
+                <div key={id} ref={item => refBorder.current.push(item)} className="priority-products__item" data-index={i}>
                     <div className="priority-products__wrapper-img">
                         <img src={url} alt={name} />    
                     </div>
