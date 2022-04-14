@@ -117,7 +117,7 @@
             "desc": "Purchasing from select family farmers who farm onganically.",
             "cost": "$45.00",
             "stars": 5,
-            "categories": true
+            "categories": false
         } 
     ]
 }
