@@ -39,8 +39,8 @@ const PriorityProducts: FC = () => {
     } = useGetProductsQuery();
 
     const creatingContent = () => {
-        return data.map(({id, url, name, desc, categories}, i) => {
-            if (categories === false) return null;
+        return data.map(({id, url, name, desc, priorityPr}, i) => {
+            if (priorityPr === false) return null;
             return (
                 <div key={id} ref={item => refBorder.current.push(item)} className="priority-products__item" data-index={i}>
                     <div className="priority-products__wrapper-img">

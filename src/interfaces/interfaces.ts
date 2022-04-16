@@ -25,5 +25,10 @@ export interface IDataProduct {
     desc: string
     cost: string,
     stars: number,
-    categories: boolean
+    category: string
+    priorityPr: boolean
+}
+
+export interface IDataFilters {
+    [index: number]: string;
 }
