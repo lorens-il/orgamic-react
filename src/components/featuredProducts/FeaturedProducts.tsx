@@ -13,7 +13,6 @@ const FeaturedProducts: FC = () => {
     
     const {
         data: filters = [],
-        isLoading,
         isError
     } = useGetFiltersQuery();
 
@@ -42,6 +41,7 @@ const FeaturedProducts: FC = () => {
                 <h2 className="featured-products__title">Featured Products</h2>
                 <input type="text" className="featured-products__search" placeholder="enter the product name"/>
                 <div className="featured-products__group-btns">
+                    {isError ? <div>ERROR</div> : null}
                     {btns}
                 </div>    
             </div>    
