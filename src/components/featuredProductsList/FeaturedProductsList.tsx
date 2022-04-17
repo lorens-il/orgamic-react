@@ -1,10 +1,14 @@
 import { FC } from "react";
+import { useAppSelector, useAppDispatch } from "../../hooks/typedSelectors";
 import { useGetProductsQuery } from "../../api/apiSlice";
 import { IDataProduct } from "../../interfaces/interfaces";
 import "../../styles/link.sass"
 
 const FeaturedProductsList: FC = () => {
     
+    const {activeBtn} = useAppSelector(state => state.activeBtn);
+    const dispatch = useAppDispatch();
+
     const {
         data: products = [],
         isError,
@@ -12,7 +16,10 @@ const FeaturedProductsList: FC = () => {
     } = useGetProductsQuery();
 
     const creatingListProducts = (products: IDataProduct[]) => {
-        return products.map(({id, url, name, cost, stars, category}) => (
+
+        const newListProducts = products.filter(item => item.category === activeBtn || activeBtn === "All");
+
+        return newListProducts.map(({id, url, name, cost, stars, category}) => (
             <div key={id} className="featured-products__item">
                 <div className="featured-products__wrapper-img">
                     <img src={url} alt={name} className="featured-products__img" />
