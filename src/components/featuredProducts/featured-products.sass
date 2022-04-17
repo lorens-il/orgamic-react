@@ -21,6 +21,7 @@
         justify-content: center
         align-items: center
         flex-wrap: wrap
+        margin-bottom: 30px
     &__btn
         padding: 5px 15px
         height: 30px
@@ -33,8 +34,51 @@
         border: none
         background: #EBEBEB
         margin: 0 5px
-        
+    &__list-products
+        display: grid
+        grid-template: repeat(1, minmax(553px, auto)) / repeat(auto-fill, minmax(370px, auto))
+        grid-auto-rows: minmax(553px, auto)
+        gap: 30px
+    &__item
+        padding: 70px 0px 0px
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: center
+        border: 1px solid #DDDDDD
+    &__wrapper-img
+        width: 290px
+        height: 191px
+    &__img
+        width: 100%
+        height: 100%
+        object-fit: contain
+    &__wrapper-desc
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        background: #F8F8F8
+        width: calc(100% + 2px)
+        margin-bottom: -1px
+        padding: 21px 0 30px
+    &__title-item
+        font-weight: 600
+        font-size: 24px
+        text-align: center
+        color: #000000
+        margin-bottom: 9px
+    &__cost
+        font-weight: 600
+        font-size: 16px
+        text-align: center
+        color: $main-color
+    &__stars
+        margin-bottom: 29px
+    
 
+.active-star
+    fill: #FF9900
 .active
     background: $main-color
     color: #fff

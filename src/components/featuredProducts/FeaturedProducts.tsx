@@ -3,8 +3,10 @@ import { useSelector, useDispatch } from "react-redux";
 import { useGetFiltersQuery } from "../../api/apiSlice";
 import { IDataFilters } from "../../interfaces/interfaces";
 import { changingActiveBtn } from "./featuredProductsSlice";
+import FeaturedProductsList from "../featuredProductsList/FeaturedProductsList";
 
 import "./featured-products.sass"
+
 
 const FeaturedProducts: FC = () => {
 
@@ -43,7 +45,8 @@ const FeaturedProducts: FC = () => {
                 <div className="featured-products__group-btns">
                     {isError ? <div>ERROR</div> : null}
                     {btns}
-                </div>    
+                </div>
+                <FeaturedProductsList/>   
             </div>    
         </div>
     )
