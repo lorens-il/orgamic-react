@@ -2,7 +2,11 @@ import { FC } from "react";
 import { useAppSelector, useAppDispatch } from "../../hooks/typedSelectors";
 import { useGetProductsQuery } from "../../api/apiSlice";
 import { IDataProduct } from "../../interfaces/interfaces";
+import Spinner from "../spinner/Spinner";
+import ErrorMessage from "../errorMessage/ErrorMessage";
+
 import "../../styles/link.sass"
+
 
 const FeaturedProductsList: FC = () => {
     
@@ -53,9 +57,12 @@ const FeaturedProductsList: FC = () => {
     const listProducts = creatingListProducts(products);
 
     return (
-        <div className="featured-products__list-products">
-            {listProducts}
-        </div> 
+        <>
+            {isLoading ? <Spinner/> : isError ? <ErrorMessage/> : null}
+            <div className="featured-products__list-products">
+                {listProducts}
+            </div> 
+        </>
     )
 }
 
