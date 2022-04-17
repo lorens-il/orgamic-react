@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useAppDispatch, useAppSelector } from "../../hooks/typedSelectors";
 import { useGetFiltersQuery } from "../../api/apiSlice";
 import { IDataFilters } from "../../interfaces/interfaces";
 import { changingActiveBtn } from "./featuredProductsSlice";
@@ -10,8 +10,8 @@ import "./featured-products.sass"
 
 const FeaturedProducts: FC = () => {
 
-    const {activeBtn} = useSelector((state: any)=> state.activeBtn)
-    const dispatch = useDispatch();
+    const {activeBtn} = useAppSelector(state => state.activeBtn);
+    const dispatch = useAppDispatch();
     
     const {
         data: filters = [],
