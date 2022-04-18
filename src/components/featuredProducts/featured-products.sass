@@ -46,6 +46,11 @@
         justify-content: space-between
         align-items: center
         border: 1px solid #DDDDDD
+        transition-duration: 0.5s
+        &:hover
+            border: 1px solid $main-color
+            box-shadow: 0px 20px 50px 4px rgba(0, 0, 0, 0.1)
+            
     &__wrapper-img
         width: 290px
         height: 191px
@@ -82,3 +87,14 @@
 .active
     background: $main-color
     color: #fff
+
+.item-enter 
+    opacity: 0
+.item-enter-active 
+    opacity: 1
+    transition: opacity 500ms ease-in
+.item-exit
+    opacity: 1
+.item-exit-active
+    opacity: 0
+    transition: opacity 500ms ease-in
