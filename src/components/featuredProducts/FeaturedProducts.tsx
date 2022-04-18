@@ -1,8 +1,8 @@
-import { FC } from "react";
+import { FC, SyntheticEvent } from "react";
 import { useAppDispatch, useAppSelector } from "../../hooks/typedSelectors";
 import { useGetFiltersQuery } from "../../api/apiSlice";
 import { IDataFilters } from "../../interfaces/interfaces";
-import { changingActiveBtn } from "./featuredProductsSlice";
+import { changingActiveBtn, changingSearchValue } from "./featuredProductsSlice";
 import FeaturedProductsList from "../featuredProductsList/FeaturedProductsList";
 
 import "./featured-products.sass"
@@ -10,7 +10,8 @@ import "./featured-products.sass"
 
 const FeaturedProducts: FC = () => {
 
-    const {activeBtn} = useAppSelector(state => state.activeBtn);
+    const {activeBtn} = useAppSelector(state => state.filters);
+    const {searchValue} = useAppSelector(state => state.filters);
     const dispatch = useAppDispatch();
     
     const {
@@ -20,6 +21,11 @@ const FeaturedProducts: FC = () => {
 
     const onClickBtn = (item: IDataFilters) => {
         dispatch(changingActiveBtn(item))
+    }
+
+    const onChangeInputValue = (e: SyntheticEvent) => {
+        const target = e.target as HTMLInputElement
+        dispatch(changingSearchValue(target.value))
     }
 
     const creatingBtns = (filters: IDataFilters[]) => {
@@ -41,7 +47,12 @@ const FeaturedProducts: FC = () => {
         <div className="featured-products">
             <div className="container">
                 <h2 className="featured-products__title">Featured Products</h2>
-                <input type="text" className="featured-products__search" placeholder="enter the product name"/>
+                <input 
+                    value={searchValue}
+                    type="text" 
+                    className="featured-products__search" 
+                    placeholder="enter the product name"
+                    onChange={onChangeInputValue}/>
                 <div className="featured-products__group-btns">
                     {isError ? <div>ERROR</div> : null}
                     {btns}

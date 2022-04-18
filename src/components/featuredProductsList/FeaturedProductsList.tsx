@@ -10,7 +10,8 @@ import "../../styles/link.sass"
 
 const FeaturedProductsList: FC = () => {
     
-    const {activeBtn} = useAppSelector(state => state.activeBtn);
+    const {activeBtn} = useAppSelector(state => state.filters);
+    const {searchValue} = useAppSelector(state => state.filters);
     const dispatch = useAppDispatch();
 
     const {
@@ -21,9 +22,12 @@ const FeaturedProductsList: FC = () => {
 
     const creatingListProducts = (products: IDataProduct[]) => {
 
-        const newListProducts = products.filter(item => item.category === activeBtn || activeBtn === "All");
+        const filteredProducts = 
+                products.filter(({name, category}) => 
+                            (name.indexOf(searchValue) > -1 || searchValue === '') && 
+                            (category === activeBtn || activeBtn === "All"));
 
-        return newListProducts.map(({id, url, name, cost, stars, category}) => (
+        return filteredProducts.map(({id, url, name, cost, stars}) => (
             <div key={id} className="featured-products__item">
                 <div className="featured-products__wrapper-img">
                     <img src={url} alt={name} className="featured-products__img" />

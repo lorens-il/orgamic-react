@@ -1,11 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { apiSlice } from "../api/apiSlice";
-import activeBtn from "../components/featuredProducts/featuredProductsSlice";
+import filters from "../components/featuredProducts/featuredProductsSlice";
 
 
 export const store = configureStore({
     reducer: {
-        activeBtn,
+        filters,
         [apiSlice.reducerPath]: apiSlice.reducer
     },
     middleware: getDefaultMiddleware => getDefaultMiddleware().concat(apiSlice.middleware),

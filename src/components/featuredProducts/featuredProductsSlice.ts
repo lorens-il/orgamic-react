@@ -7,7 +7,7 @@ const initialState = {
 }
 
 const featuredProductsSlice = createSlice({
-    name: "activeBtn",
+    name: "filters",
     initialState,
     reducers: {
         changingActiveBtn(state, action) {
@@ -23,7 +23,7 @@ const {actions, reducer} = featuredProductsSlice;
 
 export default reducer;
 
-export const {changingActiveBtn} = actions;
+export const {changingActiveBtn, changingSearchValue} = actions;
 
 
 
