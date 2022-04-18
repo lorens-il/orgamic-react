@@ -2,7 +2,8 @@ import { createSlice } from "@reduxjs/toolkit";
 
 
 const initialState = {
-    activeBtn: "All"
+    activeBtn: "All",
+    searchValue: ''
 }
 
 const featuredProductsSlice = createSlice({
@@ -11,6 +12,9 @@ const featuredProductsSlice = createSlice({
     reducers: {
         changingActiveBtn(state, action) {
             state.activeBtn = action.payload
+        },
+        changingSearchValue(state, action) {
+            state.searchValue = action.payload
         }
     }
 })
