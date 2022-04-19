@@ -6,6 +6,7 @@ import Promo from "../../promo/Promo";
 import PriorityProducts from "../../priorityProducts/PriorityProducts";
 import Facts from "../../facts/Facts";
 import FeaturedProducts from "../../featuredProducts/FeaturedProducts";
+import Offer from "../../offer/Offer";
 
 const ProductPage: FC = () => {
     return (
@@ -17,6 +18,7 @@ const ProductPage: FC = () => {
             <PriorityProducts/>
             <Facts/>
             <FeaturedProducts/>
+            <Offer/>
         </>
     )
 }
