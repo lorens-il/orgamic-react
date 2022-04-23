@@ -1,12 +1,15 @@
 import { FC } from "react";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
+
 import { useAppSelector } from "../../hooks/typedSelectors";
 import { useGetProductsQuery } from "../../api/apiSlice";
 import { IDataProduct } from "../../interfaces/interfaces";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
+
+
 import Spinner from "../spinner/Spinner";
 import ErrorMessage from "../errorMessage/ErrorMessage";
 
-import "../../styles/link.sass"
+import "../../styles/link.sass";
 
 
 const FeaturedProductsList: FC = () => {
@@ -60,8 +63,8 @@ const FeaturedProductsList: FC = () => {
                     </div>
                 </div>
             </CSSTransition>
-        ))
-    }
+        ));
+    };
 
     const listProducts = creatingListProducts(products);
 
@@ -73,7 +76,7 @@ const FeaturedProductsList: FC = () => {
             </TransitionGroup>
 
         </>
-    )
-}
+    );
+};
 
 export default FeaturedProductsList;

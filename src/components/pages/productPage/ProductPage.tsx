@@ -1,4 +1,5 @@
 import {FC} from "react";
+
 import Discounts from "../../discounts/Discounts";
 import Header from "../../header/Header";
 import Healthy from "../../healthy/Healthy";
@@ -20,7 +21,7 @@ const ProductPage: FC = () => {
             <FeaturedProducts/>
             <Offer/>
         </>
-    )
-}
+    );
+};
 
 export default ProductPage;

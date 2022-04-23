@@ -1,4 +1,5 @@
 import { FC } from "react";
+
 import organic from "./img/100Organic.svg";
 import hand from "./img/hand.svg";
 
@@ -46,7 +47,7 @@ const Healthy: FC = () => {
                 </div>      
             </div>  
         </div>
-    )
-}
+    );
+};
 
 export default Healthy;

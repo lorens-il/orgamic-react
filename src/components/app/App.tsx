@@ -1,5 +1,6 @@
 import {FC} from 'react';
 import {BrowserRouter, Route, Routes } from 'react-router-dom';
+
 import ProductPage from '../pages/productPage/ProductPage';
 
 const App: FC = () => {
@@ -9,7 +10,7 @@ const App: FC = () => {
                 <Route path='/' element={<ProductPage />}/>
             </Routes>
         </BrowserRouter>
-    )
-}
+    );
+};
 
 export default App;

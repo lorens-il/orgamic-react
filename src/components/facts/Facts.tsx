@@ -24,7 +24,7 @@ const Facts: FC = () => {
                 </div>
             </div>      
         </div>
-    )
-}
+    );
+};
 
 export default Facts;

@@ -43,7 +43,7 @@ const Spinner = () => {
             </rect>
             </g>
         </svg>
-    )
-}
+    );
+};
 
 export default Spinner;

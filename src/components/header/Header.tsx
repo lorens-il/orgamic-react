@@ -1,4 +1,5 @@
 import {FC, useState} from "react";
+
 import "./header.sass";
 import logo from "./icons/logo.png";
 import cart from "./icons/cart.svg";
@@ -10,7 +11,7 @@ const Header: FC = () => {
     const openMenu = () => {
         document.documentElement.style.overflow = toggle ? "auto" : "hidden";
         setToggle(toggle => !toggle);
-    }
+    };
 
     return (
         <header className="header">
@@ -83,7 +84,7 @@ const Header: FC = () => {
                 </div> 
             
         </header>
-    )
-}
+    );
+};
 
 export default Header;

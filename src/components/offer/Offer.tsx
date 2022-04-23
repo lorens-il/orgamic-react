@@ -1,7 +1,7 @@
 import { FC } from "react";
-import grapefruit from "./grapefruit.png"
 
-import "./offer.sass"
+import grapefruit from "./grapefruit.png";
+import "./offer.sass";
 
 const Offer: FC = () => {
     return (
@@ -21,7 +21,7 @@ const Offer: FC = () => {
                 </div> 
             </div>    
         </div>
-    )
-}
+    );
+};
 
 export default Offer;

@@ -1,13 +1,14 @@
 import { FC, useMemo } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Navigation } from "swiper";
+
 import { useGetSlidesQuery } from "../../api/apiSlice";
 
 import 'swiper/scss';
 import 'swiper/scss/navigation';
 import "./promo.sass";
-import "../../styles/link.sass"
+import "../../styles/link.sass";
 
-import { Autoplay, Navigation } from "swiper";
 import { IDataSlide } from "../../interfaces/interfaces";
 import ErrorMessage from "../errorMessage/ErrorMessage";
 import Spinner from "../spinner/Spinner";
@@ -43,9 +44,9 @@ const Promo: FC = () => {
                             </div>    
                         </div>
                 </SwiperSlide>
-            )
-        })
-    }
+            );
+        });
+    };
     
     const slides = useMemo(() => creatingSlide(dataSlides), [dataSlides]);
 
@@ -86,7 +87,7 @@ const Promo: FC = () => {
                         </div>      
                 </Swiper>      
         </div>
-    )
-}
+    );
+};
 
 export default Promo;

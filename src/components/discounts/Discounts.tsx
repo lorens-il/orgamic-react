@@ -1,4 +1,5 @@
 import { FC } from "react";
+
 import ErrorMessage from "../errorMessage/ErrorMessage";
 import Spinner from "../spinner/Spinner";
 import { useGetDiscountsQuery } from "../../api/apiSlice";
@@ -30,9 +31,9 @@ const Discounts: FC = () => {
                         <img src={url} alt={alt} />
                     </div>
                 </div>
-            )
-        })
-    }
+            );
+        });
+    };
 
     const discountsList = creatingDiscounts(discounts);
 
@@ -46,7 +47,7 @@ const Discounts: FC = () => {
             </div>    
         </div>
 
-    )
-}
+    );
+};
 
 export default Discounts;

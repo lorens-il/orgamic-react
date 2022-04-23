@@ -1,11 +1,12 @@
 import { FC, SyntheticEvent } from "react";
+
 import { useAppDispatch, useAppSelector } from "../../hooks/typedSelectors";
 import { useGetFiltersQuery } from "../../api/apiSlice";
 import { IDataFilters } from "../../interfaces/interfaces";
-import { changingActiveBtn, changingSearchValue } from "./featuredProductsSlice";
 import FeaturedProductsList from "../featuredProductsList/FeaturedProductsList";
 
-import "./featured-products.sass"
+import { changingActiveBtn, changingSearchValue } from "./featuredProductsSlice";
+import "./featured-products.sass";
 
 
 const FeaturedProducts: FC = () => {
@@ -20,13 +21,13 @@ const FeaturedProducts: FC = () => {
     } = useGetFiltersQuery();
 
     const onClickBtn = (item: IDataFilters) => {
-        dispatch(changingActiveBtn(item))
-    }
+        dispatch(changingActiveBtn(item));
+    };
 
     const onChangeInputValue = (e: SyntheticEvent) => {
-        const target = e.target as HTMLInputElement
-        dispatch(changingSearchValue(target.value))
-    }
+        const target = e.target as HTMLInputElement;
+        dispatch(changingSearchValue(target.value));
+    };
 
     const creatingBtns = (filters: IDataFilters[]) => {
         return filters.map(item => (
@@ -38,8 +39,8 @@ const FeaturedProducts: FC = () => {
                 >
                     {item}
             </button>
-        ))
-    }
+        ));
+    };
 
     const btns = creatingBtns(filters);
 
@@ -60,7 +61,7 @@ const FeaturedProducts: FC = () => {
                 <FeaturedProductsList/>   
             </div>    
         </div>
-    )
-}
+    );
+};
 
 export default FeaturedProducts;

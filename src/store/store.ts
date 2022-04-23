@@ -1,4 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
+
 import { apiSlice } from "../api/apiSlice";
 import filters from "../components/featuredProducts/featuredProductsSlice";
 
@@ -10,7 +11,7 @@ export const store = configureStore({
     },
     middleware: getDefaultMiddleware => getDefaultMiddleware().concat(apiSlice.middleware),
     devTools: process.env.NODE_ENV !== 'production',
-})
+});
 
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;

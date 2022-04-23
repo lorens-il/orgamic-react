@@ -1,4 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+
 import { IDataSlide, IDataDiscount, IDataProduct, IDataFilters } from '../interfaces/interfaces';
 
 
