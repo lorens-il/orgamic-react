@@ -1,0 +1,25 @@
+{
+    "extends": [
+        "react-app"
+    ],
+    "rules": {
+        "no-console": "warn",
+        "indent": ["warn", 2],
+        "max-len": ["warn", {"code": 120}],
+        "semi": ["warn", "always"],
+        "import/order": ["warn", {
+            "groups": [
+                "builtin", 
+                "external", 
+                "internal", 
+                "parent", 
+                "sibling", 
+                "index", 
+                "object", 
+                "type"
+            ],
+            "newlines-beetwen": "always-and-inside-groups"
+        }]
+
+    }
+}
