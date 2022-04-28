@@ -1,8 +1,8 @@
 import {FC, useState} from "react";
 
 import "./header.sass";
-import logo from "../../icons/logo.png";
-import cart from "../../icons/cart.svg";
+import logo from "./logo.png";
+import cart from "./cart.svg";
 
 const Header: FC = () => {
 
