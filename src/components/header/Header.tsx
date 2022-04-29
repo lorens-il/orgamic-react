@@ -1,4 +1,5 @@
 import {FC, useState} from "react";
+import { Link } from "react-router-dom";
 
 import "./header.sass";
 import logo from "./logo.png";
@@ -68,16 +69,16 @@ const Header: FC = () => {
                     <div className="header__cross" onClick={openMenu}>&#10006;</div>
                     <div className="container">
                         <div className="header__wrapper-navs">
-                            <a className="header__link-logo" href="/">
+                            <Link to={"/"} className="header__link-logo">
                                 <img src={logo} alt="logo" className="header__logo" />
-                            </a>
+                            </Link>
                             <nav className="header__nav">
-                                <a href="/">Home</a> 
-                                <a href="/">About</a> 
-                                <a className="header__cart" href="/">
+                                <Link to={"/"}>Home</Link> 
+                                <Link to={"about"}>About</Link> 
+                                <Link className="header__cart" to={"/"}>
                                     <img src={cart} alt="cart" />
                                     <div className="header__cart-counter">0</div>
-                                </a>
+                                </Link>
                             </nav> 
                         </div>   
                     </div>    

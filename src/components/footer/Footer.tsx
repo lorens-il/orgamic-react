@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { Link } from "react-router-dom";
 
 import logo from "./logo-w.png";
 
@@ -14,9 +15,9 @@ const Footer:FC = () => {
                 <div className="footer__content">
                     <div className="footer__wrapper">
                         <div className="footer__desc">
-                            <a href="/" className="footer__logo">
+                            <Link to={"/"} className="footer__logo">
                                 <img src={logo} alt="logo" />
-                            </a>
+                            </Link>
                             <div className="footer__txt">
                                 There are many variations of 
                                 passages of Lorem Ipsum available, 
@@ -50,8 +51,8 @@ const Footer:FC = () => {
                                 Quick Link      
                             </h3>
                             <nav className="footer__quick-link-list">
-                                <a href="/">Home</a>
-                                <a href="/">About Us</a>  
+                                <Link to={"/"}>Home</Link>
+                                <Link to={"about"}>About Us</Link>  
                             </nav> 
                         </div>    
                     </div>
