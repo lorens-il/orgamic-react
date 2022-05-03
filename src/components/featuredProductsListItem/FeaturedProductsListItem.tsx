@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { v4 as uuidv4 } from 'uuid';
 
 import { useAddingProductMutation } from "../../api/apiSlice";
 import { IDataProduct } from "../../interfaces/interfaces";
@@ -8,8 +9,9 @@ const FeaturedProductsListItem: FC<IDataProduct> = (props) => {
     const [sentingToCart] = useAddingProductMutation();
 
     const addingInCart = (product: IDataProduct) => {
-        sentingToCart(product).unwrap();
+        sentingToCart({...product, id: uuidv4()}).unwrap();
     };
+
     const {url, name, cost, stars} = props;
     return (
         <div className="featured-products__item">
