@@ -25,6 +25,8 @@ const FeaturedProductsList: FC = () => {
 
     const creatingListProducts = (products: IDataProduct[]) => {
 
+        if (products.length === 0) return null;
+        
         const filteredProducts = 
                 products.filter(({name, category}) => 
                             (name.indexOf(searchValue) > -1) && 

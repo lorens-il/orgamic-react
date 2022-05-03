@@ -6,6 +6,7 @@ import { IDataSlide, IDataDiscount, IDataProduct, IDataFilters } from '../interf
 export const apiSlice = createApi({
     reducerPath: 'api',
     baseQuery: fetchBaseQuery({baseUrl: "http://localhost:3001"}),
+    tagTypes: ["Products"],
     endpoints: builder => ({
         getSlides: builder.query<IDataSlide[], void>({
             query: () => "/slides",
@@ -18,6 +19,18 @@ export const apiSlice = createApi({
         }),
         getFilters: builder.query<IDataFilters[], void>({
             query: () => "/filters",
+        }),
+        getCart: builder.query<IDataProduct[], void>({
+            query: () => "/cart",
+            providesTags: ["Products"]
+        }),
+        addingProduct: builder.mutation<IDataProduct[], IDataProduct>({
+            query: product => ({
+                url: "/cart",
+                method: "POST",
+                body: product
+            }),
+            invalidatesTags: ["Products"]
         })
     }),
 
@@ -27,5 +40,7 @@ export const {
                 useGetSlidesQuery,
                 useGetDiscountsQuery,
                 useGetProductsQuery,
-                useGetFiltersQuery 
+                useGetFiltersQuery,
+                useGetCartQuery,
+                useAddingProductMutation
             } = apiSlice;

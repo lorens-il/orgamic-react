@@ -1,137 +1,169 @@
 {
-    "slides": [
-        {
-            "id": "916f74f5-8ebc-4b31-b4a6-7488d859b8d3",
-            "url": "https://i.ibb.co/jrxFnB3/background1.jpg",
-            "alt": "organic",
-            "fruitUrl": "https://i.ibb.co/f9JSgCB/fruit.png",
-            "fruitAlt": "lime"
-        },
-        {
-            "id": "e849a062-f782-4ff7-ad64-307d14131736",
-            "url": "https://i.ibb.co/jrxFnB3/background1.jpg",
-            "alt": "organic",
-            "fruitUrl": "https://i.ibb.co/f9JSgCB/fruit.png",
-            "fruitAlt": "lime"
-        },
-        {
-            "id": "16be3839-cf41-46dc-84bf-63369d3bdf6a",
-            "url": "https://i.ibb.co/jrxFnB3/background1.jpg",
-            "alt": "organic",
-            "fruitUrl": "https://i.ibb.co/f9JSgCB/fruit.png",
-            "fruitAlt": "lime"
-        }
-    ],
-    "discounts": [
-        {
-            "id": 1,
-            "title": "Get 10% off on Vegetables",
-            "desc": "Shop our selection of organic fresh vegetables in a discounted price. 10% off on all vegetables.",
-            "url":"https://i.ibb.co/SyQPJSB/broccoli.png",
-            "alt": "vegetables",
-            "discountStyles":   {
-                "background": "#FF66001A"
-            },
-            "pictureVariant": "discounts__picture_1"
-        },
-        {
-            "id": 2,
-            "title": "Get 10% off on Vegetables",
-            "desc": "Shop our selection of organic fresh vegetables in a discounted price. 10% off on all vegetables.",
-            "url":"https://i.ibb.co/vhr2cDL/vegetables.png",
-            "alt": "vegetables",
-            "discountStyles":   {
-                "background": "#3498DB1A"
-            },
-            "pictureVariant": "discounts__picture_2"
-        }
-    ],
-    "products": [
-        {
-            "id":"14be3847-cf11-46dc-84bf-63369d3bdf6a",
-            "url": "https://i.ibb.co/Rczfkbz/Watermelon.png",
-            "name": "Watermelon",
-            "desc": "Purchasing from select family farmers who farm onganically.",
-            "cost": "$11",
-            "stars": 5,
-            "category": "Berries",
-            "priorityPr": true
-        },
-        {
-            "id":"14be3337-cf11-46dc-84bf-63369d3bdf6a",
-            "url": "https://i.ibb.co/dKq3Sfy/Fresh-Fruits.png",
-            "name": "Strawberry",
-            "desc": "Purchasing from select family farmers who farm onganically.",
-            "cost": "$10",
-            "stars": 5,
-            "category": "Berries",
-            "priorityPr": true
-        },
-        {
-            "id":"14be3839-cf41-46dc-84bf-63369d3bdf6a",
-            "url": "https://i.ibb.co/JqjNGLP/Eggpent.png",
-            "name": "Eggpen",
-            "desc": "Purchasing from select family farmers who farm onganically.",
-            "cost": "$10",
-            "stars": 4,
-            "category": "Vegetables",
-            "priorityPr": true
-        },
-        {
-            "id":"14be3839-cf41-46dc-84bf-62169d3bdf6a",
-            "url": "https://i.ibb.co/vHhKCzF/Tomato.png",
-            "name": "Tomato",
-            "desc": "Purchasing from select family farmers who farm onganically.",
-            "cost": "$15",
-            "stars": 4,
-            "category": "Vegetables",
-            "priorityPr": true
-        },
-        {
-            "id":"10bes439-cf41-46dc-84bf-62169d3bdf6a",
-            "url": "https://i.ibb.co/42tFNt6/Red-Pepper.png",
-            "name": "Red Pepper",
-            "desc": "Purchasing from select family farmers who farm onganically.",
-            "cost": "$11.00 - $20.00",
-            "stars": 5,
-            "category": "Vegetables",
-            "priorityPr": false
-        },
-        {
-            "id":"11be3139-cf41-46dc-84bf-62169d3bdf6a",
-            "url": "https://i.ibb.co/TRHKNbn/Cabbage.png",
-            "name": "Cabbage",
-            "desc": "Purchasing from select family farmers who farm onganically.",
-            "cost": "$15.00",
-            "stars": 4,
-            "category": "Vegetables",
-            "priorityPr": false
-        },
-        {
-            "id":"11be3439-cf41-43dc-84bf-62169d3bdf6a",
-            "url": "https://i.ibb.co/fGtv5Yj/Garlic.png",
-            "name": "Garlic",
-            "desc": "Purchasing from select family farmers who farm onganically.",
-            "cost": "$18.00",
-            "stars": 3,
-            "category": "Vegetables",
-            "priorityPr": false
-        },
-        {
-            "id":"11be3439-cf41-46dc-84bf-62169d3bdf6a",
-            "url": "https://i.ibb.co/RS9yB5D/Meat-Beef.png",
-            "name": "Meat Beef",
-            "desc": "Purchasing from select family farmers who farm onganically.",
-            "cost": "$45.00",
-            "stars": 5,
-            "category": "Organic",
-            "priorityPr": false
-        } 
-    ],
-    "filters": [
-        "All",
-        "Berries",
-        "Organic",
-        "Vegetables"
-    ]
+  "slides": [
+    {
+      "id": "916f74f5-8ebc-4b31-b4a6-7488d859b8d3",
+      "url": "https://i.ibb.co/jrxFnB3/background1.jpg",
+      "alt": "organic",
+      "fruitUrl": "https://i.ibb.co/f9JSgCB/fruit.png",
+      "fruitAlt": "lime"
+    },
+    {
+      "id": "e849a062-f782-4ff7-ad64-307d14131736",
+      "url": "https://i.ibb.co/jrxFnB3/background1.jpg",
+      "alt": "organic",
+      "fruitUrl": "https://i.ibb.co/f9JSgCB/fruit.png",
+      "fruitAlt": "lime"
+    },
+    {
+      "id": "16be3839-cf41-46dc-84bf-63369d3bdf6a",
+      "url": "https://i.ibb.co/jrxFnB3/background1.jpg",
+      "alt": "organic",
+      "fruitUrl": "https://i.ibb.co/f9JSgCB/fruit.png",
+      "fruitAlt": "lime"
+    }
+  ],
+  "discounts": [
+    {
+      "id": 1,
+      "title": "Get 10% off on Vegetables",
+      "desc": "Shop our selection of organic fresh vegetables in a discounted price. 10% off on all vegetables.",
+      "url": "https://i.ibb.co/SyQPJSB/broccoli.png",
+      "alt": "vegetables",
+      "discountStyles": {
+        "background": "#FF66001A"
+      },
+      "pictureVariant": "discounts__picture_1"
+    },
+    {
+      "id": 2,
+      "title": "Get 10% off on Vegetables",
+      "desc": "Shop our selection of organic fresh vegetables in a discounted price. 10% off on all vegetables.",
+      "url": "https://i.ibb.co/vhr2cDL/vegetables.png",
+      "alt": "vegetables",
+      "discountStyles": {
+        "background": "#3498DB1A"
+      },
+      "pictureVariant": "discounts__picture_2"
+    }
+  ],
+  "products": [
+    {
+      "id": "14be3847-cf11-46dc-84bf-63369d3bdf6a",
+      "url": "https://i.ibb.co/Rczfkbz/Watermelon.png",
+      "name": "Watermelon",
+      "desc": "Purchasing from select family farmers who farm onganically.",
+      "cost": "$11",
+      "stars": 5,
+      "category": "Berries",
+      "priorityPr": true
+    },
+    {
+      "id": "14be3337-cf11-46dc-84bf-63369d3bdf6a",
+      "url": "https://i.ibb.co/dKq3Sfy/Fresh-Fruits.png",
+      "name": "Strawberry",
+      "desc": "Purchasing from select family farmers who farm onganically.",
+      "cost": "$10",
+      "stars": 5,
+      "category": "Berries",
+      "priorityPr": true
+    },
+    {
+      "id": "14be3839-cf41-46dc-84bf-63369d3bdf6a",
+      "url": "https://i.ibb.co/JqjNGLP/Eggpent.png",
+      "name": "Eggpen",
+      "desc": "Purchasing from select family farmers who farm onganically.",
+      "cost": "$10",
+      "stars": 4,
+      "category": "Vegetables",
+      "priorityPr": true
+    },
+    {
+      "id": "14be3839-cf41-46dc-84bf-62169d3bdf6a",
+      "url": "https://i.ibb.co/vHhKCzF/Tomato.png",
+      "name": "Tomato",
+      "desc": "Purchasing from select family farmers who farm onganically.",
+      "cost": "$15",
+      "stars": 4,
+      "category": "Vegetables",
+      "priorityPr": true
+    },
+    {
+      "id": "10bes439-cf41-46dc-84bf-62169d3bdf6a",
+      "url": "https://i.ibb.co/42tFNt6/Red-Pepper.png",
+      "name": "Red Pepper",
+      "desc": "Purchasing from select family farmers who farm onganically.",
+      "cost": "$11.00 - $20.00",
+      "stars": 5,
+      "category": "Vegetables",
+      "priorityPr": false
+    },
+    {
+      "id": "11be3139-cf41-46dc-84bf-62169d3bdf6a",
+      "url": "https://i.ibb.co/TRHKNbn/Cabbage.png",
+      "name": "Cabbage",
+      "desc": "Purchasing from select family farmers who farm onganically.",
+      "cost": "$15.00",
+      "stars": 4,
+      "category": "Vegetables",
+      "priorityPr": false
+    },
+    {
+      "id": "11be3439-cf41-43dc-84bf-62169d3bdf6a",
+      "url": "https://i.ibb.co/fGtv5Yj/Garlic.png",
+      "name": "Garlic",
+      "desc": "Purchasing from select family farmers who farm onganically.",
+      "cost": "$18.00",
+      "stars": 3,
+      "category": "Vegetables",
+      "priorityPr": false
+    },
+    {
+      "id": "11be3439-cf41-46dc-84bf-62169d3bdf6a",
+      "url": "https://i.ibb.co/RS9yB5D/Meat-Beef.png",
+      "name": "Meat Beef",
+      "desc": "Purchasing from select family farmers who farm onganically.",
+      "cost": "$45",
+      "stars": 5,
+      "category": "Organic",
+      "priorityPr": false
+    }
+  ],
+  "cart": [
+    {
+      "id": "14be3337-cf11-46dc-84bf-63369d3bdf6a",
+      "url": "https://i.ibb.co/dKq3Sfy/Fresh-Fruits.png",
+      "name": "Strawberry",
+      "desc": "Purchasing from select family farmers who farm onganically.",
+      "cost": "$10",
+      "stars": 5,
+      "category": "Berries",
+      "priorityPr": true
+    },
+    {
+      "id": "14be3839-cf41-46dc-84bf-63369d3bdf6a",
+      "url": "https://i.ibb.co/JqjNGLP/Eggpent.png",
+      "name": "Eggpen",
+      "desc": "Purchasing from select family farmers who farm onganically.",
+      "cost": "$10",
+      "stars": 4,
+      "category": "Vegetables",
+      "priorityPr": true
+    },
+    {
+      "id": "11be3439-cf41-46dc-84bf-62169d3bdf6a",
+      "url": "https://i.ibb.co/RS9yB5D/Meat-Beef.png",
+      "name": "Meat Beef",
+      "desc": "Purchasing from select family farmers who farm onganically.",
+      "cost": "$45",
+      "stars": 5,
+      "category": "Organic",
+      "priorityPr": false
+    }
+  ],
+  "filters": [
+    "All",
+    "Berries",
+    "Organic",
+    "Vegetables"
+  ]
 }

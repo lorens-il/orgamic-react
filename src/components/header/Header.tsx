@@ -75,7 +75,7 @@ const Header: FC = () => {
                             <nav className="header__nav">
                                 <Link to={"/"}>Home</Link> 
                                 <Link to={"about"}>About</Link> 
-                                <Link className="header__cart" to={"/"}>
+                                <Link className="header__cart" to={"cart"}>
                                     <img src={cart} alt="cart" />
                                     <div className="header__cart-counter">0</div>
                                 </Link>

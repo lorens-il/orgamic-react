@@ -5,6 +5,7 @@ import Header from '../header/Header';
 import Footer from '../footer/Footer';
 import ProductPage from '../pages/productPage/ProductPage';
 import AboutUsPage from '../pages/aboutPage/AboutPage';
+import Cart from '../pages/cart/Cart';
 
 const App: FC = () => {
     return (
@@ -13,6 +14,7 @@ const App: FC = () => {
             <Routes>
                 <Route path='/' element={<ProductPage />}/>
                 <Route path='about' element={<AboutUsPage/>}/>
+                <Route path='cart' element={<Cart/>}/>
             </Routes>
             <Footer/>
         </BrowserRouter>
