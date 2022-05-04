@@ -22,23 +22,11 @@
         line-height: 22px
         color: #888888
         margin-bottom: 27px
-    &__item
-        padding: 20px 10px 30px
-        position: relative
-        display: flex
-        flex-direction: column
-        align-items: center
-        width: $size-priority-products
-        min-height: 354px
-        border: 1px solid $main-color
-        overflow: hidden
-        transition-duration: 0.5s
-        &_active
-            border: 1px solid #DDDDDD
     &__wrapper
         position: relative
         display: flex
         justify-content: center
+        width: $size-priority-products
     &__wrapper-img
         width: 200px
         height: 145px
@@ -51,9 +39,24 @@
         display: flex
         width: 540px
         left: -54.4%
-        transition-duration: 0.6s
-    &__wrapper
+        transition-duration: 0.6s 
+    &__item
+        padding: 20px 10px 30px
+        position: relative
+        display: flex
+        flex-direction: column
+        align-items: center
         width: $size-priority-products
+        min-height: 354px
+        border: 1px solid $main-color
+        overflow: hidden
+        transition-duration: 0.5s
+        &_active
+            border: 1px solid #dddddd
+        &_active .priority-products__title
+            color: $main-color
+        &_active .priority-products__btns
+            left: 54.4%
     &__arrow
         display: flex
         justify-content: center
