@@ -1,11 +1,12 @@
 import { FC } from "react";
 
-import { useGetCartQuery } from "../../../api/apiSlice";
+import { useGetCartQuery, useDeleteProductMutation} from "../../../api/apiSlice";
 import { IDataProduct } from "../../../interfaces/interfaces";
 import Spinner from "../../spinner/Spinner";
 import ErrorMessage from "../../errorMessage/ErrorMessage";
 
 import "./cart.sass";
+
 const Cart:FC = () => {
 
     const {
@@ -13,6 +14,13 @@ const Cart:FC = () => {
         isError,
         isLoading
     } = useGetCartQuery();
+
+    const [delProduct] = useDeleteProductMutation();
+
+    const deletingProductId = (id: string | number) => {
+        delProduct(id);
+        
+    };
 
     const creatingListProducts = (products: IDataProduct[]) => {
         
@@ -34,9 +42,10 @@ const Cart:FC = () => {
                             {cost}
                         </div>
                         <button 
-                            className="link link_small link_btn">
+                            className="link link_small link_btn"
+                            onClick={() => deletingProductId(id)}>
                                 delete   
-                            </button>
+                        </button>
                     </div>  
                 );
             });

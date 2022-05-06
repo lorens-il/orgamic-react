@@ -1,11 +1,17 @@
 import {FC, useState} from "react";
 import { Link } from "react-router-dom";
 
+import { useGetCartQuery } from "../../api/apiSlice";
+
 import "./header.sass";
 import logo from "./logo.png";
 import cart from "./cart.svg";
 
 const Header: FC = () => {
+
+    const {
+        data: products = [],
+    } = useGetCartQuery();
 
     const [toggle, setToggle] = useState(false);
 
@@ -77,7 +83,7 @@ const Header: FC = () => {
                                 <Link to={"about"}>About</Link> 
                                 <Link className="header__cart" to={"cart"}>
                                     <img src={cart} alt="cart" />
-                                    <div className="header__cart-counter">0</div>
+                                    <div className="header__cart-counter">{products.length}</div>
                                 </Link>
                             </nav> 
                         </div>   
