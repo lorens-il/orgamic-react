@@ -1,4 +1,4 @@
-import { FC, SyntheticEvent } from "react";
+import { ChangeEvent, FC } from "react";
 
 import { useAppDispatch, useAppSelector } from "../../hooks/typedSelectors";
 import { useGetFiltersQuery } from "../../api/apiSlice";
@@ -24,9 +24,8 @@ const FeaturedProducts: FC = () => {
         dispatch(changingActiveBtn(item));
     };
 
-    const onChangeInputValue = (e: SyntheticEvent) => {
-        const target = e.target as HTMLInputElement;
-        dispatch(changingSearchValue(target.value));
+    const onChangeInputValue = (e: ChangeEvent<HTMLInputElement>) => {
+        dispatch(changingSearchValue(e.target.value));
     };
 
     const creatingBtns = (filters: IDataFilters[]) => {
@@ -45,7 +44,7 @@ const FeaturedProducts: FC = () => {
     const btns = creatingBtns(filters);
 
     return (
-        <div className="featured-products">
+        <div id="featured-products" className="featured-products">
             <div className="container">
                 <h2 className="featured-products__title">Featured Products</h2>
                 <input 

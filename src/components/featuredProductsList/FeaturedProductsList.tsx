@@ -24,8 +24,6 @@ const FeaturedProductsList: FC = () => {
     } = useGetProductsQuery();
 
     const creatingListProducts = (products: IDataProduct[]) => {
-
-        if (products.length === 0) return null;
         
         const filteredProducts = 
                 products.filter(({name, category}) => 
@@ -49,7 +47,10 @@ const FeaturedProductsList: FC = () => {
 
     return (
         <>
-            {isLoading ? <Spinner/> : isError ? <ErrorMessage/> : null}
+            {
+                isLoading ? <Spinner/> : isError ? <ErrorMessage/> : products.length === 0 ? 
+                <div style={{textAlign: "center"}}>Empty</div> : null
+            }
             <TransitionGroup className="featured-products__list-products">
                 {listProducts}
             </TransitionGroup>

@@ -1,6 +1,8 @@
-import { FC, MouseEvent, useRef } from "react"; 
+import { FC, useRef } from "react"; 
 
+import { useAppDispatch, useAppSelector } from "../../hooks/typedSelectors";
 import { useGetProductsQuery } from "../../api/apiSlice";
+import { changingActiveBtn } from "../featuredProducts/featuredProductsSlice";
 import ErrorMessage from "../errorMessage/ErrorMessage";
 import Spinner from "../spinner/Spinner";
 
@@ -10,25 +12,28 @@ import "./priorityProducts.sass";
 const PriorityProducts: FC = () => {
     
     const {
-        data = [],
+        data: products = [],
         isLoading,
         isError
     } = useGetProductsQuery();
 
+    const {activeBtn} = useAppSelector(state => state.filters);
+    const dispatch = useAppDispatch();
     const refProducts = useRef<any[]>([]);
 
-    const onChangingStyles = (i: number, e: MouseEvent) => {
-
-        e.preventDefault();
+    const onChangingStyles = (i: number, category: string = activeBtn) => {
 
         refProducts.current[i].classList.toggle("priority-products__item_active");
+        dispatch(changingActiveBtn(category));
     };
 
     const creatingContent = () => {
 
-        const filteredData = data.filter(({priorityPr}) => priorityPr === true);
+        if (products.length === 0) return <div style={{textAlign: "center"}}>Empty</div>;
 
-        return filteredData.map(({id, url, name, desc}, i) => {
+        const filteredData = products.filter(({priorityPr}) => priorityPr === true);
+
+        return filteredData.map(({id, url, name, desc, category}, i) => {
             return (
                 <div key={id}
                     ref={item => refProducts.current.push(item)}
@@ -45,8 +50,8 @@ const PriorityProducts: FC = () => {
                             <div className="priority-products__wrapper">
                                 <a
                                     className="link link_small"
-                                    href="/"
-                                    onClick={(e) => onChangingStyles(i, e)}
+                                    href="#featured-products"
+                                    onClick={() => onChangingStyles(i, category)}
                                     >
                                     <div>shop now</div>
                                 </a>    
@@ -54,7 +59,7 @@ const PriorityProducts: FC = () => {
                             <div className="priority-products__wrapper">
                                 <div
                                     className="priority-products__arrow"  
-                                    onClick={(e) => onChangingStyles(i, e)}
+                                    onClick={() => onChangingStyles(i)}
                                     >
                                     <img src={arrow} alt="arrow" />
                                 </div>      

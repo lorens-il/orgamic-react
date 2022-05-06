@@ -16,11 +16,9 @@ const Cart:FC = () => {
 
     const creatingListProducts = (products: IDataProduct[]) => {
         
+        if (products.length === 0) return <div className="cart__empty">Empty</div>; 
 
-        return products.length === 0 ? 
-            <div className="cart__empty">Empty</div> 
-            : 
-            products.map(({id, name, category, cost}) => {
+        return products.map(({id, name, category, cost}) => {
                 return (
                     <div 
                         key={id} 
