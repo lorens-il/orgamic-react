@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 import { useGetCartQuery, useDeleteProductMutation} from "../../../api/apiSlice";
 import { IDataProduct } from "../../../interfaces/interfaces";
@@ -53,17 +54,26 @@ const Cart:FC = () => {
 
     const listProducts = creatingListProducts(products);
     return(
-        <div className="cart">
-            <div className="cart__title">
-                Products    
-            </div>
-            <div className="container">
-                <div className="cart__wrapper-products">
-                    {isLoading ? <Spinner/> : isError ? <ErrorMessage/> : null}
-                    {listProducts}
+        <HelmetProvider>
+            <Helmet>
+                <meta 
+                    name="description"
+                    content="your shopping cart"
+                    />
+                    <title>Shopping cart</title>
+            </Helmet>
+            <div className="cart">
+                <div className="cart__title">
+                    Products    
                 </div>
-            </div>    
-        </div>
+                <div className="container">
+                    <div className="cart__wrapper-products">
+                        {isLoading ? <Spinner/> : isError ? <ErrorMessage/> : null}
+                        {listProducts}
+                    </div>
+                </div>    
+            </div>
+        </HelmetProvider>
     );
 };
 

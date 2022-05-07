@@ -9,8 +9,6 @@ import FeaturedProductsListItem from "../featuredProductsListItem/FeaturedProduc
 import Spinner from "../spinner/Spinner";
 import ErrorMessage from "../errorMessage/ErrorMessage";
 
-import "../../styles/link.sass";
-
 
 const FeaturedProductsList: FC = () => {
     

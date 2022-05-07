@@ -7,7 +7,7 @@ import { useGetSlidesQuery } from "../../api/apiSlice";
 import 'swiper/scss';
 import 'swiper/scss/navigation';
 import "./promo.sass";
-import "../../styles/link.sass";
+
 
 import { IDataSlide } from "../../interfaces/interfaces";
 import ErrorMessage from "../errorMessage/ErrorMessage";

@@ -1,4 +1,5 @@
 import {FC} from "react";
+import { Helmet, HelmetProvider } from "react-helmet-async";
 
 import Discounts from "../../discounts/Discounts";
 import Healthy from "../../healthy/Healthy";
@@ -10,7 +11,14 @@ import Offer from "../../offer/Offer";
 
 const ProductPage: FC = () => {
     return (
-        <>
+        <HelmetProvider>
+            <Helmet>
+                <meta
+                        name="description"
+                        content="Page with list of products"
+                        />
+                <title>Orgamic</title>
+            </Helmet>
             <Promo/>
             <Discounts/>
             <Healthy/>
@@ -18,7 +26,7 @@ const ProductPage: FC = () => {
             <Facts/>
             <FeaturedProducts/>
             <Offer/>
-        </>
+        </HelmetProvider>
     );
 };
 
