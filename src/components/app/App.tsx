@@ -1,14 +1,15 @@
-import {FC} from 'react';
+import {FC, lazy} from 'react';
 import {BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import Header from '../header/Header';
 import Footer from '../footer/Footer';
-import ProductPage from '../pages/productPage/ProductPage';
 import AboutUsPage from '../pages/aboutPage/AboutPage';
-import Cart from '../pages/cart/Cart';
 import Page404 from '../pages/page404/Page404';
 
 import "../../styles/link.sass";
+
+const ProductPage = lazy(() => import("../pages/productPage/ProductPage"));
+const Cart = lazy(() => import("../pages/cart/Cart"));
 
 const App: FC = () => {
     return (
