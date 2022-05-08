@@ -6,6 +6,7 @@ import Footer from '../footer/Footer';
 import AboutUsPage from '../pages/aboutPage/AboutPage';
 import Page404 from '../pages/page404/Page404';
 import Spinner from '../spinner/Spinner';
+import ErrorBoundary from '../errorBoundary/ErrorBoundary';
 
 import "../../styles/link.sass";
 
@@ -18,9 +19,23 @@ const App: FC = () => {
             <Header/>
             <Suspense fallback={<Spinner/>}>
                 <Routes>
-                    <Route path='/' element={<ProductPage />}/>
+                    <Route 
+                        path='/' 
+                        element={
+                            <ErrorBoundary>
+                                <ProductPage/>
+                            </ErrorBoundary>
+                        }
+                        />
                     <Route path='about' element={<AboutUsPage/>}/>
-                    <Route path='cart' element={<Cart/>}/>
+                    <Route 
+                        path='cart' 
+                        element={
+                            <ErrorBoundary>
+                                <Cart/>
+                            </ErrorBoundary>
+                        }
+                        />
                     <Route path='*' element={<Page404/>}/>
                 </Routes>
             </Suspense>
