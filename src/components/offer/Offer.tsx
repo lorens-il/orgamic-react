@@ -11,7 +11,7 @@ const Offer: FC = () => {
                     <div className="offer__desc">
                         <div className="offer__title">Dhamaka offer</div>
                         <div className="offer__discount">35% <span>off</span></div>
-                        <a className="link link_small" href="/" ><div>buy</div></a>     
+                        <a className="link link_small" href="#featured-products" ><div>shop now</div></a>     
                     </div>
                     <div className="offer__product">
                         <div className="offer__wrapper-img">
