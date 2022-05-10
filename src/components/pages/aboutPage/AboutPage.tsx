@@ -13,11 +13,21 @@ const AboutPage:FC = () => {
     return(
         <HelmetProvider>
             <Helmet>
-                <meta
-                    name="description"
-                    content="About our company"
-                    />
-                <title>About Us</title>
+                <title>Orgamic / About Us</title>
+                <meta name="title" content="Orgamic / About Us"/>
+                <meta name="description" content="About our company"/>
+
+                <meta property="og:type" content="website"/>
+                <meta property="og:url" content="https://orgamic-175b3.web.app/about"/>
+                <meta property="og:title" content="Orgamic / About Us"/>
+                <meta property="og:description" content="About our company"/>
+                <meta property="og:image" content=""/>
+
+                <meta property="twitter:card" content="summary_large_image"/>
+                <meta property="twitter:url" content="https://orgamic-175b3.web.app/about"/>
+                <meta property="twitter:title" content="Orgamic / About Us"/>
+                <meta property="twitter:description" content="About our company"/>
+                <meta property="twitter:image" content=""/>
             </Helmet>
             <div className="about-us">
             <h1 className="about-us__title">

@@ -56,11 +56,23 @@ const Cart:FC = () => {
     return(
         <HelmetProvider>
             <Helmet>
-                <meta 
-                    name="description"
-                    content="your shopping cart"
-                    />
-                    <title>Shopping cart</title>
+    
+                <title>Orgamic / Shopping cart</title>
+                <meta name="title" content="Orgamic"/>
+                <meta name="description" content="Your shopping cart"/>
+
+                <meta property="og:type" content="website"/>
+                <meta property="og:url" content="https://orgamic-175b3.web.app/cart"/>
+                <meta property="og:title" content="Orgamic"/>
+                <meta property="og:description" content="Your shopping cart"/>
+                <meta property="og:image" content=""/>
+
+                <meta property="twitter:card" content="summary_large_image"/>
+                <meta property="twitter:url" content="https://orgamic-175b3.web.app/cart"/>
+                <meta property="twitter:title" content="Orgamic"/>
+                <meta property="twitter:description" content="Your shopping cart"/>
+                <meta property="twitter:image" content=""></meta>
+
             </Helmet>
             <div className="cart">
                 <div className="cart__title">

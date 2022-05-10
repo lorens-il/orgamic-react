@@ -13,11 +13,24 @@ const ProductPage: FC = () => {
     return (
         <HelmetProvider>
             <Helmet>
-                <meta
-                        name="description"
-                        content="Page with list of products"
-                        />
+                {/* "Primary Meta Tags" */}
                 <title>Orgamic</title>
+                <meta name="title" content="Orgamic"/>
+                <meta name="description" content="Page with list of products"/>
+
+                {/* "Open Graph" */}
+                <meta property="og:type" content="website"/>
+                <meta property="og:url" content="https://orgamic-175b3.web.app/"/>
+                <meta property="og:title" content="Orgamic"/>
+                <meta property="og:description" content="Page with list of products"/>
+                <meta property="og:image" content=""/>
+
+                {/* "Twitter" */}
+                <meta property="twitter:card" content="summary_large_image"/>
+                <meta property="twitter:url" content="https://orgamic-175b3.web.app/"/>
+                <meta property="twitter:title" content="Orgamic"/>
+                <meta property="twitter:description" content="Page with list of products"/>
+                <meta property="twitter:image" content=""></meta>
             </Helmet>
             <Promo/>
             <Discounts/>
