@@ -1,1 +1,2 @@
-# orgamic-react
+- Учебный проект 
+- Используемые технологии: React, Redux, Redux Toolkit, RTK Query, React Transition Group, uuid, TS
