@@ -9,6 +9,8 @@ import Facts from "../../facts/Facts";
 import FeaturedProducts from "../../featuredProducts/FeaturedProducts";
 import Offer from "../../offer/Offer";
 
+import main from "./main.png";
+
 const ProductPage: FC = () => {
     return (
         <HelmetProvider>
@@ -23,14 +25,14 @@ const ProductPage: FC = () => {
                 <meta property="og:url" content="https://orgamic-175b3.web.app/"/>
                 <meta property="og:title" content="Orgamic"/>
                 <meta property="og:description" content="Page with list of products"/>
-                <meta property="og:image" content=""/>
+                <meta property="og:image" content={main}/>
 
                 {/* "Twitter" */}
                 <meta property="twitter:card" content="summary_large_image"/>
                 <meta property="twitter:url" content="https://orgamic-175b3.web.app/"/>
                 <meta property="twitter:title" content="Orgamic"/>
                 <meta property="twitter:description" content="Page with list of products"/>
-                <meta property="twitter:image" content=""></meta>
+                <meta property="twitter:image" content={main}/>
             </Helmet>
             <Promo/>
             <Discounts/>
