@@ -7,6 +7,7 @@ import Spinner from "../../spinner/Spinner";
 import ErrorMessage from "../../errorMessage/ErrorMessage";
 
 import "./cart.sass";
+import main from "./main.jpg";
 
 const Cart:FC = () => {
 
@@ -65,13 +66,13 @@ const Cart:FC = () => {
                 <meta property="og:url" content="https://orgamic-175b3.web.app/cart"/>
                 <meta property="og:title" content="Orgamic"/>
                 <meta property="og:description" content="Your shopping cart"/>
-                <meta property="og:image" content=""/>
+                <meta property="og:image" content={main}/>
 
                 <meta property="twitter:card" content="summary_large_image"/>
                 <meta property="twitter:url" content="https://orgamic-175b3.web.app/cart"/>
                 <meta property="twitter:title" content="Orgamic"/>
                 <meta property="twitter:description" content="Your shopping cart"/>
-                <meta property="twitter:image" content=""></meta>
+                <meta property="twitter:image" content={main}/>
 
             </Helmet>
             <div className="cart">

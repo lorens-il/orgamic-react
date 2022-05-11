@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
 import "./aboutPage.sass";
+import about from "./about.jpg";
 
 const AboutPage:FC = () => {
     
@@ -21,13 +22,13 @@ const AboutPage:FC = () => {
                 <meta property="og:url" content="https://orgamic-175b3.web.app/about"/>
                 <meta property="og:title" content="Orgamic / About Us"/>
                 <meta property="og:description" content="About our company"/>
-                <meta property="og:image" content=""/>
+                <meta property="og:image" content={about}/>
 
                 <meta property="twitter:card" content="summary_large_image"/>
                 <meta property="twitter:url" content="https://orgamic-175b3.web.app/about"/>
                 <meta property="twitter:title" content="Orgamic / About Us"/>
                 <meta property="twitter:description" content="About our company"/>
-                <meta property="twitter:image" content=""/>
+                <meta property="twitter:image" content={about}/>
             </Helmet>
             <div className="about-us">
             <h1 className="about-us__title">
