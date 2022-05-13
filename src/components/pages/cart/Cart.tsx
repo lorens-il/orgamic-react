@@ -7,7 +7,7 @@ import Spinner from "../../spinner/Spinner";
 import ErrorMessage from "../../errorMessage/ErrorMessage";
 
 import "./cart.sass";
-import main from "./main.png";
+import main from "../main.png";
 
 const Cart:FC = () => {
 

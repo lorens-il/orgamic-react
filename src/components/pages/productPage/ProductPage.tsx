@@ -9,7 +9,7 @@ import Facts from "../../facts/Facts";
 import FeaturedProducts from "../../featuredProducts/FeaturedProducts";
 import Offer from "../../offer/Offer";
 
-import main from "./main.png";
+import main from "../main.png";
 
 const ProductPage: FC = () => {
     return (

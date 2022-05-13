@@ -19,7 +19,7 @@ const PriorityProducts: FC = () => {
 
     const {activeBtn} = useAppSelector(state => state.filters);
     const dispatch = useAppDispatch();
-    const refProducts = useRef<any[]>([]);
+    const refProducts = useRef<HTMLDivElement[]>([]);
 
     const onChangingStyles = (i: number, category: string = activeBtn) => {
 
@@ -36,7 +36,7 @@ const PriorityProducts: FC = () => {
         return filteredData.map(({id, url, name, desc, category}, i) => {
             return (
                 <div key={id}
-                    ref={item => refProducts.current.push(item)}
+                    ref={(item: HTMLDivElement) => refProducts.current.push(item)}
                     className="priority-products__item"
                     >
                         <div className="priority-products__wrapper-img">
