@@ -1,8 +1,10 @@
-import { Component, ComponentClass, ErrorInfo } from "react";
+import { Component, ErrorInfo } from "react";
+
+import { ErrorBoundaryProps } from "../../interfaces/interfaces";
 
 import ErrorMessage from "../errorMessage/ErrorMessage";
 
-class ErrorBoundary extends Component<ComponentClass> {
+class ErrorBoundary extends Component<ErrorBoundaryProps> {
 
     state = {
         error: false

@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
-import { IDataSlide, IDataDiscount, IDataProduct, IDataFilters } from '../interfaces/interfaces';
+import { IDataSlide, IDataDiscount, IDataProduct } from '../interfaces/interfaces';
 
 
 export const apiSlice = createApi({
@@ -17,7 +17,7 @@ export const apiSlice = createApi({
         getProducts: builder.query<IDataProduct[], void>({
             query: () => "/products",
         }),
-        getFilters: builder.query<IDataFilters[], void>({
+        getFilters: builder.query<string[], void>({
             query: () => "/filters",
         }),
         getCart: builder.query<IDataProduct[], void>({

@@ -2,7 +2,6 @@ import { ChangeEvent, FC } from "react";
 
 import { useAppDispatch, useAppSelector } from "../../hooks/typedSelectors";
 import { useGetFiltersQuery } from "../../api/apiSlice";
-import { IDataFilters } from "../../interfaces/interfaces";
 import FeaturedProductsList from "../featuredProductsList/FeaturedProductsList";
 
 import { changingActiveBtn, changingSearchValue } from "./featuredProductsSlice";
@@ -20,7 +19,7 @@ const FeaturedProducts: FC = () => {
         isError
     } = useGetFiltersQuery();
 
-    const onClickBtn = (item: IDataFilters) => {
+    const onClickBtn = (item: string) => {
         dispatch(changingActiveBtn(item));
     };
 
@@ -28,7 +27,7 @@ const FeaturedProducts: FC = () => {
         dispatch(changingSearchValue(e.target.value));
     };
 
-    const creatingBtns = (filters: IDataFilters[]) => {
+    const creatingBtns = (filters: string[]) => {
         return filters.map(item => (
             <button
                 key={Date.now() + Math.random()}

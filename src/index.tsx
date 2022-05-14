@@ -1,4 +1,4 @@
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 
 
@@ -9,10 +9,14 @@ import App from './components/app/App';
 import './styles/index.sass';
 import './styles/media.sass';
 
-ReactDOM.render(
+const container = document.querySelector<Element>("main#root");
+if (!container) throw new Error("Failed to find the root element");
+
+let root= createRoot(container);
+
+root.render(
   <Provider store={store}>
       <App />
   </Provider>,
-  document.getElementById('root')
 );
 

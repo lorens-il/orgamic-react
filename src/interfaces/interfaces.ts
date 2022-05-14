@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export interface IDataSlide {
     id: string | number,
     url: string,
@@ -29,6 +31,11 @@ export interface IDataProduct {
     priorityPr: boolean
 }
 
-export interface IDataFilters {
-    [index: number]: string;
+export interface IInitialState  {
+    activeBtn: string,
+    searchValue: string
+}
+
+export interface ErrorBoundaryProps {
+    children: ReactNode 
 }

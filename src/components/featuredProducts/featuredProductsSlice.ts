@@ -1,7 +1,9 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+
+import { IInitialState } from "../../interfaces/interfaces";
 
 
-const initialState = {
+const initialState: IInitialState = {
     activeBtn: "All",
     searchValue: ''
 };
@@ -10,10 +12,10 @@ const featuredProductsSlice = createSlice({
     name: "filters",
     initialState,
     reducers: {
-        changingActiveBtn(state, action) {
+        changingActiveBtn(state, action: PayloadAction<string>) {
             state.activeBtn = action.payload;
         },
-        changingSearchValue(state, action) {
+        changingSearchValue(state, action: PayloadAction<string>) {
             state.searchValue = action.payload;
         }
     }
