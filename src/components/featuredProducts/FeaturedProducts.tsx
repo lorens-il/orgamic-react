@@ -1,4 +1,4 @@
-import { ChangeEvent, FC } from "react";
+import { ChangeEvent, FC, useMemo } from "react";
 
 import { useAppDispatch, useAppSelector } from "../../hooks/typedSelectors";
 import { useGetFiltersQuery } from "../../api/apiSlice";
@@ -40,7 +40,8 @@ const FeaturedProducts: FC = () => {
         ));
     };
 
-    const btns = creatingBtns(filters);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    const btns = useMemo(() => creatingBtns(filters), [filters, activeBtn]);
 
     return (
         <div id="featured-products" className="featured-products">

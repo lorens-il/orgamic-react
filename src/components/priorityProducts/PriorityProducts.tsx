@@ -29,7 +29,6 @@ const PriorityProducts: FC = () => {
 
     const creatingContent = () => {
 
-        if (products.length === 0) return <div style={{textAlign: "center"}}>Empty</div>;
 
         const filteredData = products.filter(({priorityPr}) => priorityPr === true);
 
@@ -75,7 +74,10 @@ const PriorityProducts: FC = () => {
     return (
         <div className="priority-products">
             <div className="container">
-                {isLoading && !isError ? <Spinner/> : isError ? <ErrorMessage/> : null}
+                {
+                    isLoading ? <Spinner/> : isError ? <ErrorMessage/> : products.length === 0 ? 
+                    <div style={{textAlign: "center"}}>Empty</div> : null
+                }
                 <div className="priority-products__content">
                     {list} 
                 </div>    

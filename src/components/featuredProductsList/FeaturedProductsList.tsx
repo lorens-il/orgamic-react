@@ -25,7 +25,7 @@ const FeaturedProductsList: FC = () => {
         
         const filteredProducts = 
                 products.filter(({name, category}) => 
-                            (name.indexOf(searchValue) > -1) && 
+                            (name.includes(searchValue)) && 
                             (category === activeBtn || activeBtn === "All"));
 
         return filteredProducts.map((item) => (
