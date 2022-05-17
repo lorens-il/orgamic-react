@@ -12,7 +12,7 @@ import './styles/media.sass';
 const container = document.querySelector<Element>("main#root");
 if (!container) throw new Error("Failed to find the root element");
 
-let root= createRoot(container);
+const root= createRoot(container);
 
 root.render(
   <Provider store={store}>
