@@ -5,5 +5,6 @@
     - TS;
     - Redux Toolkit; 
     - RTK Query;
-    - React Transition Group; 
-    - uuid.
+    - React Transition Group;
+    - Swiper;
+    - Uuid.
