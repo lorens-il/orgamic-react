@@ -16,9 +16,12 @@ const Discounts: FC = () => {
     } = useGetDiscountsQuery();
 
     const creatingDiscounts = (discounts: IDataDiscount[]) => {
-        return discounts.map(({id, title, desc, url, alt, discountStyles, pictureVariant}) => {
+        return discounts.map(({id, title, desc, url, alt, setStyle}) => {
             return (
-                <div key={id} className="discounts__item" style={discountStyles}>
+                <div key={id} 
+                    className={`discounts__item ${setStyle ? 
+                    "discounts__item_color-1" : "discounts__item_color-2"}`}
+                    >
                     <div className="discounts__wrapper">
                         <h2 className="discounts__title">
                             {title}
@@ -27,7 +30,8 @@ const Discounts: FC = () => {
                             {desc}
                         </div>    
                     </div>
-                    <div className={`discounts__picture ${pictureVariant}`}>
+                    <div className={`discounts__picture ${setStyle ? 
+                        "discounts__picture_option-1" : "discounts__picture_option-2"}`}>
                         <img src={url} alt={alt} />
                     </div>
                 </div>

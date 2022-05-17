@@ -9,15 +9,12 @@ export interface IDataSlide {
 }
 
 export interface IDataDiscount {
-    id: string | number,
+    id: string,
+    setStyle: number,
     title : string,
     desc: string,
     url: string,
     alt: string,
-    discountStyles: {
-        background: string
-    },
-    pictureVariant: string
 }
 
 export interface IDataProduct {
