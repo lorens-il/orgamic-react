@@ -1,2 +1,9 @@
 - Учебный проект 
-- Используемые технологии: React, Redux, Redux Toolkit, RTK Query, React Transition Group, uuid, TS
+- Используемые технологии: 
+                          - React; 
+                          - Redux;
+                          - TS;
+                          - Redux Toolkit; 
+                          - RTK Query;
+                          - React Transition Group; 
+                          - uuid.
