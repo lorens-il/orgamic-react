@@ -7,7 +7,8 @@ import ErrorMessage from "../errorMessage/ErrorMessage";
 import Spinner from "../spinner/Spinner";
 
 import arrow from "./arrow.svg";
-import "./priorityProducts.sass";
+import "./sass/priorityProducts.sass";
+import "./sass/priorityProductsMedia.sass";
 
 const PriorityProducts: FC = () => {
     

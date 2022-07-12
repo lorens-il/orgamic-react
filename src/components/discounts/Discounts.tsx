@@ -5,7 +5,8 @@ import Spinner from "../spinner/Spinner";
 import { useGetDiscountsQuery } from "../../api/apiSlice";
 import { IDataDiscount } from "../../interfaces/interfaces";
 
-import "./discounts.sass";
+import "./sass/discounts.sass";
+import "./sass/discounts-media.sass";
 
 const Discounts: FC = () => {
 

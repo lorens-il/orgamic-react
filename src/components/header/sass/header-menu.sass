@@ -1,0 +1,107 @@
+@import "../../../styles/variables.sass"
+    
+@media (max-width: 1170px)
+    .header__wrapper-address
+            width: 77%
+
+@media (max-width: 768px)
+    .header__wrapper-address
+            width: 70%
+
+@media (max-width: 576px)
+    .header
+        &__link-logo
+            margin-bottom: 18px
+        &__humburger
+            display: flex
+            position: relative
+            justify-content: center
+            align-items: center
+            margin: 10px 0
+            width: 50px
+            height: 35px
+            left: 83%
+            z-index: 1
+            cursor: pointer
+        &__humburger-line
+            width: 45px
+            height: 1px
+            background: $main-color
+            &::before, &::after
+                position: relative
+                display: block
+                content: ""
+                width: 45px
+                height: 1px
+                background: $main-color
+            &::before
+                top: 10px
+            &::after
+                bottom: 10px
+        &__cross
+            position: absolute
+            display: block
+            font-size: 38px
+            top: 20px
+            right: 20px
+            color: $main-color
+            transition-duration: 0.6s
+            &:hover
+                transform: rotate(-360deg)
+                font-size: 0
+        &__menu
+            background: #fff
+            width: 100vw
+            height: 100vh
+            position: fixed
+            top: 0
+            left: -100%
+            z-index: 4
+            overflow: auto
+            transition-duration: 0.8s
+            &_active
+                left: 0
+        &__cart
+            width: 60px
+            height: 60px
+            img
+                width: 25px
+                height: 25px
+            &-counter
+                top: 25%
+                right: 18%
+        &__info
+            font-size: 10px
+        &__wrapper-navs
+            display: flex
+            flex-direction: column
+            justify-content: stretch
+            margin: 45px 0
+        &__nav
+            flex-direction: column
+            a 
+                font-size: 24px
+                margin: 0 0 18px 0
+
+@media (max-width: 495px)
+    .header
+        &__contacts
+            justify-content: center
+        &__wrapper-address
+            justify-content: center
+        &__address:nth-child(even)
+            margin-right: 0
+
+@media (max-width: 376px)
+    .promo
+        &__title
+            font-size: 22px
+            line-height: 32px
+            span
+                text-shadow: none
+                color: #000
+    .header
+        &__address
+            margin: 0 0 10px 0
+        &:nth-last-child(1)
+            margin-bottom: 0

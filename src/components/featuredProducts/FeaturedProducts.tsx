@@ -5,7 +5,8 @@ import { useGetFiltersQuery } from "../../api/apiSlice";
 import FeaturedProductsList from "../featuredProductsList/FeaturedProductsList";
 
 import { changingActiveBtn, changingSearchValue } from "./featuredProductsSlice";
-import "./featured-products.sass";
+import "./sass/featured-products.sass";
+import "./sass/featured-products-media.sass";
 
 
 const FeaturedProducts: FC = () => {

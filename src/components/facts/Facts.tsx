@@ -1,6 +1,8 @@
 import { FC } from "react";
 
-import "./facts.sass";
+import "./sass/facts.sass";
+import "./sass/facts-media.sass";
+
 
 const Facts: FC = () => {
     return (

@@ -4,15 +4,16 @@ import { Autoplay, Navigation } from "swiper";
 
 import { useGetSlidesQuery } from "../../api/apiSlice";
 
-import 'swiper/scss';
-import 'swiper/scss/navigation';
-import "./promo.sass";
-
 
 import { IDataSlide } from "../../interfaces/interfaces";
 import ErrorMessage from "../errorMessage/ErrorMessage";
 import Spinner from "../spinner/Spinner";
 
+
+import 'swiper/scss';
+import 'swiper/scss/navigation';
+import "./sass/promo.sass";
+import "./sass/promo-media.sass";
 
 
 const Promo: FC = () => {

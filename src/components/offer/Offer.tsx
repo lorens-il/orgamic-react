@@ -1,7 +1,8 @@
 import { FC } from "react";
 
 import grapefruit from "./grapefruit.png";
-import "./offer.sass";
+import "./sass/offer.sass";
+import "./sass/offer-media.sass";
 
 const Offer: FC = () => {
     return (

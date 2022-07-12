@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 import logo from "./logo-w.png";
 
-import "../../styles/social.sass";
-import "./footer.sass";
-
+import "./../../styles/social.sass";
+import "./sass/footer.sass";
+import "./sass/footer-media.sass";
 
 const Footer:FC = () => {
     

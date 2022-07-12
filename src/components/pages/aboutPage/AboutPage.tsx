@@ -2,7 +2,8 @@ import { FC } from "react";
 import { useNavigate } from "react-router-dom";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 
-import "./aboutPage.sass";
+import "./sass/aboutPage.sass";
+import "./sass/aboutPageMenu.sass";
 import about from "./about.png";
 
 const AboutPage:FC = () => {

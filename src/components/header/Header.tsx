@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 
 import { useGetCartQuery } from "../../api/apiSlice";
 
-import "./header.sass";
+import "./sass/header.sass";
+import "./sass/header-menu.sass";
 import logo from "./logo.png";
 import cart from "./cart.svg";
 

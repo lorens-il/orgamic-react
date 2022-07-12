@@ -6,7 +6,8 @@ import { IDataProduct } from "../../../interfaces/interfaces";
 import Spinner from "../../spinner/Spinner";
 import ErrorMessage from "../../errorMessage/ErrorMessage";
 
-import "./cart.sass";
+import "./sass/cart.sass";
+import "./sass/cart-media.sass";
 import main from "../main.png";
 
 const Cart:FC = () => {

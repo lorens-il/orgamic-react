@@ -3,7 +3,8 @@ import { FC } from "react";
 import organic from "./img/100Organic.svg";
 import hand from "./img/hand.svg";
 
-import "./healthy.sass";
+import "./sass/healthy.sass";
+import "./sass/healthy-media.sass";
 
 const Healthy: FC = () => {
     return (
