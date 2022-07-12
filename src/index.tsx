@@ -6,8 +6,6 @@ import { store } from './store/store';
 import App from './components/app/App';
 
 
-import './styles/index.sass';
-import './styles/media.sass';
 
 const container = document.querySelector<Element>("main#root");
 if (!container) throw new Error("Failed to find the root element");

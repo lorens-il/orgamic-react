@@ -8,7 +8,10 @@ import Page404 from '../pages/page404/Page404';
 import Spinner from '../spinner/Spinner';
 import ErrorBoundary from '../errorBoundary/ErrorBoundary';
 
+
+import '../..//styles/index.sass';
 import "../../styles/link.sass";
+import '../../styles/media.sass';
 
 const ProductPage = lazy(() => import("../pages/productPage/ProductPage"));
 const Cart = lazy(() => import("../pages/cart/Cart"));

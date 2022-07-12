@@ -9,7 +9,7 @@ const initialState: IInitialState = {
 };
 
 const featuredProductsSlice = createSlice({
-    name: "filters",
+    name: "filters",// составная часть типа в экшене
     initialState,
     reducers: {
         changingActiveBtn(state, action: PayloadAction<string>) {
