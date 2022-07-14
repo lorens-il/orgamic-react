@@ -42,7 +42,7 @@ const FeaturedProducts: FC = () => {
     };
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    const btns = useMemo(() => creatingBtns(filters), [filters, activeBtn]);
+    const btns = useMemo(() => creatingBtns(filters), [filters, activeBtn]); // memo нужно чтобы список не пересоздавался при вводе в инпут
 
     return (
         <div id="featured-products" className="featured-products">
