@@ -25,7 +25,7 @@ const FeaturedProductsList: FC = () => {
         
         const filteredProducts = 
                 products.filter(({name, category}) => 
-                            ((name.includes(searchValue)) || name.toUpperCase().includes(searchValue)) && 
+                            name.toLowerCase().includes(searchValue.toLowerCase()) && 
                             (category === activeBtn || activeBtn === "All"));
 
         return filteredProducts.map((item) => (
