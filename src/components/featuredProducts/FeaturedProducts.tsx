@@ -31,7 +31,7 @@ const FeaturedProducts: FC = () => {
     const creatingBtns = (filters: string[]) => {
         return filters.map(item => (
             <button
-                key={Date.now() + Math.random()}
+                key={item}
                 type="submit" 
                 className={`featured-products__btn ${activeBtn === item ? "active" : ''}`}
                 onClick={() => onClickBtn(item)}
