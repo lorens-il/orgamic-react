@@ -7,6 +7,7 @@
 - Redux Toolkit; 
 - RTK Query;
 - React Transition Group;
+- React Router
 - Swiper;
 - Uuid.
 
