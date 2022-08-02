@@ -1,4 +1,5 @@
-import { ChangeEvent, FC, useMemo } from "react";
+import { ChangeEvent, FC, useEffect, useMemo } from "react";
+import { useSearchParams } from "react-router-dom";
 
 import { useAppDispatch, useAppSelector } from "../../hooks/typedSelectors";
 import { useGetFiltersQuery } from "../../api/apiSlice";
@@ -13,12 +14,25 @@ const FeaturedProducts: FC = () => {
 
     const {activeBtn} = useAppSelector(state => state.filters);
     const {searchValue} = useAppSelector(state => state.filters);
+    const [searchParam, setSearchParam] = useSearchParams();
     const dispatch = useAppDispatch();
-    
+
     const {
         data: filters = [],
         isError
     } = useGetFiltersQuery();
+
+    useEffect(() => {
+        const typeFilter = searchParam.get("filter");
+        if(typeFilter&& searchParam.toString()) {
+            onClickBtn(typeFilter);
+        }
+    }, []);
+
+
+    useEffect(() => {
+        setSearchParam({filter: activeBtn});
+    }, [activeBtn]);
 
     const onClickBtn = (item: string) => {
         dispatch(changingActiveBtn(item));

@@ -46,8 +46,8 @@ const FeaturedProductsList: FC = () => {
     return (
         <>
             {
-                isLoading ? <Spinner/> : isError ? <ErrorMessage/> : products.length === 0 ? 
-                <div style={{textAlign: "center"}}>Empty</div> : null
+                isLoading ? <Spinner/> : isError ? <ErrorMessage/> : listProducts.length === 0 ? 
+                <div style={{textAlign: "center", fontWeight: "700", fontSize: "20px"}}>There is nothing here choose another category</div> : null
             }
             <TransitionGroup className="featured-products__list-products">
                 {listProducts}
