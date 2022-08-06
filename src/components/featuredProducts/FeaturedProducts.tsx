@@ -4,15 +4,17 @@ import { useSearchParams } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../hooks/typedSelectors";
 import { useGetFiltersQuery } from "../../api/apiSlice";
 import FeaturedProductsList from "../featuredProductsList/FeaturedProductsList";
+import { IInitialState } from "../../interfaces/interfaces";
 
 import { changingActiveBtn, changingSearchValue } from "./featuredProductsSlice";
 import "./sass/featured-products.sass";
 import "./sass/featured-products-media.sass";
 
+export const selectorActiveBtn = (state : {filters: IInitialState}): IInitialState => state.filters;
 
 const FeaturedProducts: FC = () => {
 
-    const {activeBtn} = useAppSelector(state => state.filters);
+    const {activeBtn} = useAppSelector(selectorActiveBtn);
     const {searchValue} = useAppSelector(state => state.filters);
     const [searchParam, setSearchParam] = useSearchParams();
     const dispatch = useAppDispatch();
