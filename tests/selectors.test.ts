@@ -1,16 +1,27 @@
-import {selectorActiveBtn} from '../src/components/featuredProducts/FeaturedProducts';
+import {selectorActiveBtn, selectorSearchValue} from "../src/components/featuredProducts/selector";
+
+const activeBtn = {
+    filters: { 
+        activeBtn: 'Berry',
+        searchValue: 'garlic'
+    }
+};
 
 describe('redux selector active btn', () => {
-    it('change active btn in state', () => {
-
-        const activeBtn = {
-            filters: { 
-                activeBtn: 'Berry',
-                searchValue: ''
-            }
-        };
+    it('select active btn in state', () => {
         const result = selectorActiveBtn(activeBtn);
 
-        expect(result).toEqual(activeBtn);
+        expect(result).toEqual({ 
+            activeBtn: 'Berry',
+            searchValue: 'garlic'
+        });
+    });
+    it('select search value', () => {
+        const result = selectorSearchValue(activeBtn);
+
+        expect(result).toEqual({ 
+            activeBtn: 'Berry',
+            searchValue: 'garlic'
+        });
     });
 });
